@@ -1,10 +1,10 @@
-import LoginBox from "../Components/LoginBox";
+import SignUpBox from "../Components/SignUpBox";
 
 function Login() {
     
     return (
         <div>
-            <LoginBox/>
+            <SignUpBox/>
         </div>
     
     );
