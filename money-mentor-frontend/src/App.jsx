@@ -10,12 +10,6 @@ function App() {
         <Header> 
           
         </Header>
-        <nav>
-          <Link to="/login">Login</Link>
-          <br/>
-          <Link to="/signup">SignUp</Link>
-        </nav>
-
         <Routes>
           
           <Route path="/login" element={<Login />} />
