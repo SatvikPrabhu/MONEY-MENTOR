@@ -3,6 +3,7 @@ import Login from './Pages/Login';
 import SignUp from "./Pages/SignUp";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
+import LoanPage from './Pages/LoanPage';
 import { Button } from "@mui/material"
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/home" element={<Home/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/loanpage" element = {<LoanPage/>} />
         </Routes>
       </div>
     </BrowserRouter>

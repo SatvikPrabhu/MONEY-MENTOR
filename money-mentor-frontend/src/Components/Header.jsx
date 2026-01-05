@@ -14,6 +14,21 @@ function Header() {
                 sx={{ height: 180, mr: 2, margin:0}}
                 />
                 </Link>
+            <Box sx={{ display: 'flex', gap: 3 }} >
+                <Button 
+                    color="secondary"
+                    variant="contained" 
+                    sx={{ 
+                        backgroundColor: '#463be5ff', 
+                        '&:hover': {
+                            backgroundColor: '#281aabff' 
+                        }
+                    }}
+                    component={Link} 
+                    to="/loanpage">
+                    Calculator
+                </Button>
+            </Box>
             <Box sx={{ flexGrow: 1 }} />
 
             <Box sx={{ display: 'flex', gap: 3 }} >
@@ -44,7 +59,7 @@ function Header() {
                     SIGN-UP
                 </Button>
             </Box>
-            {/* Rest of your header content */}
+            {/* Remaining header content */}
         </Toolbar>
         </header>);
 }
