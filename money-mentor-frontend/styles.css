@@ -1,0 +1,45 @@
+header {
+    background-color: #67618a;
+    background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+}
+@keyframes typing {
+ 0% {
+   width: 0;
+   opacity: 0;
+ }
+ 40% {
+   width: 100%;
+   opacity: 1;
+ }
+ 60% {
+   width: 100%;
+   opacity: 1;
+ }
+ 100% {
+   width: 100%;
+   opacity: 0;
+ }
+}
+
+
+.typewriter-text {
+ display: inline-block;
+ overflow: hidden;
+ white-space: nowrap;
+ width: max-content; 
+ font-family: 'Poppins,Arial,sans-serif';  
+ animation: typing 10s steps(40) infinite;
+ color: #000; 
+ text-align: center;  
+ position: relative;
+}
+
+
+@keyframes fadeEffect {
+ 0%, 100% {
+   opacity: 0; 
+ }
+ 50% {
+   opacity: 1; 
+ }
+}
