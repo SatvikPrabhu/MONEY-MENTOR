@@ -44,6 +44,17 @@ function handleRateChange(event, newValue) {
     });
 }
 
+function monthToYear(months) {
+    let result = "";
+    if(months === 12) return "1 year";
+    if(months%12 === 0) {
+        result = months/12 + " years";
+    } else {
+        result = Math.floor(months/12) + " years, " + months%12 + " months";
+    }
+
+    return result;
+}
     return (
         <div> 
             <ThemeProvider theme={theme}>
@@ -55,7 +66,6 @@ function handleRateChange(event, newValue) {
                     top: 80,
                     left: 250,
                     width: 700,
-                    height: 420,
                     borderRadius: 2,
                     display: 'flex',
                     bgcolor: 'background.main',
@@ -68,27 +78,21 @@ function handleRateChange(event, newValue) {
                         displayVal={"₹" + values.amt} 
                         defaultVal='40000' 
                         Slide={handleAmountChange} 
-                        maxlim={100000}
-                        minlim={5000}
-                        incr={100}
+                        maxlim={100000} minlim={5000} incr={100}
                     />
                     <SliderWithHeading 
                         heading="Loan Tenure (months)" 
-                        displayVal={values.tenure} 
+                        displayVal={monthToYear(values.tenure)} 
                         defaultVal='50' 
                         Slide={handleTenureChange}
-                        maxlim={84}
-                        minlim={12}
-                        incr={0.25}
+                        maxlim={84} minlim={12} incr={1}
                     />
                     <SliderWithHeading 
                         heading="Interest Rate" 
-                        displayVal={values.rate} 
+                        displayVal={values.rate + "%"} 
                         defaultVal='50'
                         Slide={handleRateChange}
-                        maxlim={15}
-                        minlim={2.5}
-                        incr={0.75}
+                        maxlim={15} minlim={2.5} incr={0.75}
                     />
                 </Box>
             </ThemeProvider>

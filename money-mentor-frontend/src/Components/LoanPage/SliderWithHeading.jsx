@@ -9,11 +9,13 @@ function SliderWithHeading(props) {
             <Typography variant="h6" sx={{ ml: 5, mt:2, fontSize : '1.5rem' }}> 
                 {props.heading}            
             </Typography>
-            <Typography variant="h4" sx={{ mr: 5, mt: 2, fontSize:'1.2rem', }} >
-                {props.displayVal}
-            </Typography>
+            <Box sx={{backgroundColor:'#ced5d6ff', borderRadius:5}}>
+                <Typography variant="h4" sx={{ margin:2, fontSize:'1.5rem', }} >
+                    {props.displayVal}
+                </Typography>
+            </Box>
         </Box>
-        <Box sx={{marginTop: 3, display: 'flex'}}> 
+        <Box sx={{marginTop: 3, display: 'flex', justifyContent:'space-between'}}> 
             <Slider 
                 defaultValue={props.defaultVal} 
                 aria-label="Default" 
@@ -25,10 +27,18 @@ function SliderWithHeading(props) {
                 sx={{
                     width: 600, 
                     ml: 2,
-                    mb:2
                 }}
             />
         </Box>
+        <Box sx={{display:'flex', justifyContent:'space-between', mb:2}}> 
+            <Typography variant="h4" sx={{fontSize: '1.2rem'}}> 
+                {props.minlim}
+            </Typography>
+            <Typography variant="h4" sx={{fontSize: '1.2rem'}}> 
+                {props.maxlim}
+            </Typography>
+        </Box>
+
     </div>);
 }
 
