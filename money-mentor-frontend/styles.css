@@ -1,6 +1,7 @@
 header {
     background-color: #67618a;
     background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+<<<<<<< HEAD
 }
 @keyframes typing {
  0% {
@@ -43,3 +44,6 @@ header {
    opacity: 1; 
  }
 }
+=======
+}
+>>>>>>> a60eceb2cffb80ff1828533db90407b1e1afe502

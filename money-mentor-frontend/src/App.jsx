@@ -1,21 +1,22 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Login from './Pages/Login';
 import SignUp from "./Pages/SignUp";
-
+import Header from "./Components/Header";
+import Home from "./Pages/Home";
+import LoanPage from './Pages/LoanPage';
+import { Button } from "@mui/material"
 function App() {
     return (
     <BrowserRouter>
       <div>
-        <nav>
-          <Link to="/login">Login</Link>
-          <br/>
-          <Link to="/signup">SignUp</Link>
-        </nav>
-
-        <Routes>
+        <Header> 
           
+        </Header>
+        <Routes>
+          <Route path="/home" element={<Home/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/loanpage" element = {<LoanPage/>} />
         </Routes>
       </div>
     </BrowserRouter>

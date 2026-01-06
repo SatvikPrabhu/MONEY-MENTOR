@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Box, Card, CardContent, CardActions, Button, Typography, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -189,4 +190,16 @@ function Home() {
 }
 
 
+=======
+function Home() {
+    return (
+        <div>
+            <h1>Welcome to MoneyMentor</h1>
+            <p>Your personal finance companion</p>
+            {/* Add your main page content here */}
+        </div>
+    );
+}
+
+>>>>>>> a60eceb2cffb80ff1828533db90407b1e1afe502
 export default Home;
