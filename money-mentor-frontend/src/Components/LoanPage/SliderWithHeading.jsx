@@ -6,11 +6,11 @@ function SliderWithHeading(props) {
     return (
     <div> 
         <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-            <Typography variant="h6" sx={{ ml: 5, mt:2, fontSize : '1.5rem' }}> 
+            <Typography variant="h4" sx={{ ml: 5, mt:2, fontSize : '1.5rem' }}> 
                 {props.heading}            
             </Typography>
             <Box sx={{backgroundColor:'#ced5d6ff', borderRadius:5}}>
-                <Typography variant="h4" sx={{ margin:2, fontSize:'1.5rem', }} >
+                <Typography variant="h4" sx={{ margin:2, fontSize:'1.4rem', }} >
                     {props.displayVal}
                 </Typography>
             </Box>
@@ -24,8 +24,9 @@ function SliderWithHeading(props) {
                 step={props.incr}
                 min={props.minlim}
                 max={props.maxlim}
+                color="white"
                 sx={{
-                    width: 600, 
+                    width: 400, 
                     ml: 2,
                 }}
             />
