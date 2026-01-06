@@ -9,11 +9,7 @@ function Header() {
                 <Link to="/home">
                 <Box
                 component="img"
-<<<<<<< HEAD
                 src="/Logo-removebg-preview.png"
-=======
-                src="/public/Logo-removebg-preview.png"
->>>>>>> a60eceb2cffb80ff1828533db90407b1e1afe502
                 alt="Company Logo"
                 sx={{ height: 180, mr: 2, margin:0}}
                 />
