@@ -4,7 +4,7 @@ import SignUp from "./Pages/SignUp";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import LoanPage from './Pages/LoanPage';
-import { Button } from "@mui/material"
+import CreditScore from './Pages/CreditScore';
 function App() {
     return (
     <BrowserRouter>
@@ -17,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/loanpage" element = {<LoanPage/>} />
+          <Route path="/creditscore'" element = {<CreditScore/>} />
         </Routes>
       </div>
     </BrowserRouter>
