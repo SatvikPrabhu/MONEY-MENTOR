@@ -1,4 +1,4 @@
-import SignUpBox from "../Components/SignUpBox";
+import SignUpBox from "../Components/LoginSignUp/SignUpBox";
 
 function Login() {
     

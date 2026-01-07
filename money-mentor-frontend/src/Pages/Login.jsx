@@ -1,4 +1,4 @@
-import LoginBox from "../Components/LoginBox";
+import LoginBox from "../Components/LoginSignUp/LoginBox";
 import Header from "../Components/Header";
 function Login() {
     
