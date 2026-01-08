@@ -4,6 +4,8 @@ import SignUp from "./Pages/SignUp";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import LoanPage from './Pages/LoanPage';
+import CreditScore from './Pages/CreditScore';
+import TaxEstimator from './Pages/TaxEstimator';
 import { Button } from "@mui/material"
 
 function App() {
