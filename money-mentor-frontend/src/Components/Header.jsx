@@ -16,12 +16,12 @@ function Header() {
                 </Link>
             <Box sx={{ display: 'flex', gap: 3 }} >
                 <Button 
-                    color="secondary"
                     variant="contained" 
                     sx={{ 
-                        backgroundColor: '#463be5ff', 
+                        backgroundColor: '#F4E1C6', 
+                        color: "#5B122D",
                         '&:hover': {
-                            backgroundColor: '#281aabff' 
+                            backgroundColor: '#FFF3E7' 
                         }
                     }}
                     component={Link} 
@@ -33,12 +33,12 @@ function Header() {
 
             <Box sx={{ display: 'flex', gap: 3 }} >
                 <Button 
-                    color="secondary"
                     variant="contained" 
                     sx={{ 
-                        backgroundColor: '#463be5ff', 
+                        backgroundColor: '#F4E1C6', 
+                        color: "#5B122D",
                         '&:hover': {
-                            backgroundColor: '#281aabff' 
+                            backgroundColor: '#FFF3E7' 
                         }
                     }}
                     component={Link} 
@@ -46,12 +46,12 @@ function Header() {
                     LOG-IN
                 </Button>
                             <Button 
-                    color="secondary"
                     variant="contained" 
                     sx={{ 
-                        backgroundColor: '#463be5ff', 
+                        backgroundColor: '#F4E1C6', 
+                        color: "#5B122D",
                         '&:hover': {
-                            backgroundColor: '#281aabff' 
+                            backgroundColor: '#FFF3E7' 
                         }
                     }}
                     component={Link} 
