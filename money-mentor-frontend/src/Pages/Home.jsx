@@ -74,7 +74,7 @@ function Home() {
             desc: 'Check your credit score and learn how to improve it.',
             link: '/creditscore',
             btn: 'Check Score',
-          },
+          },  
           {
             title: 'Savings Calculator',
             desc: 'Plan your savings goals and track your progress.',
