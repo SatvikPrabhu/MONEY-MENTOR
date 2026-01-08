@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import LoanPage from './Pages/LoanPage';
 import CreditScore from './Pages/CreditScore';
+import TaxEstimator from './Pages/TaxEstimator';
 function App() {
     return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/loanpage" element = {<LoanPage/>} />
           <Route path="/creditscore" element = {<CreditScore/>} />
+          <Route path="/taxestimator" element = {<TaxEstimator/>} />
         </Routes>
       </div>
     </BrowserRouter>
