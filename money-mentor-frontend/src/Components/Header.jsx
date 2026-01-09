@@ -11,7 +11,7 @@ function Header() {
                 component="img"
                 src="/Logo-removebg-preview.png"
                 alt="Company Logo"
-                sx={{ height: 180, mr: 2, margin:0}}
+                sx={{ height: 150, mr: 2, margin:0}}
                 />
                 </Link>
             <Box sx={{ display: 'flex', gap: 3 }} >

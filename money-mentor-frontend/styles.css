@@ -3,7 +3,7 @@ header {
     background-color: #5B122D;
     background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
     border-bottom-left-radius: 5%;
-    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
 }
 @keyframes typing {
  0% {
@@ -47,3 +47,12 @@ header {
  }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F4E1C6;
+}
+
+html {
+  background-color: #F4E1C6;
+}

@@ -75,7 +75,7 @@ function EMI(values) {
     return (
         <div> 
             <ThemeProvider theme={theme}>
-                <Typography variant="h4" sx={{ fontSize: '1.rem', textAlign:'center', mt: 8}}>
+                <Typography variant="h3" sx={{ fontSize: '1.rem', textAlign:'center', mt: 8}}>
                     Loan Calculator
                 </Typography>
                 <Box sx={{display:'flex', justifyContent:'center', gap:30}}>
@@ -133,11 +133,11 @@ function EMI(values) {
                             alignItems: 'center',
                             alignContent: 'center',
                             }}> 
-                            <Typography variant='h4' sx={{textAlign: 'center', fontSize: '3rem', mb:2}}> Your Monthly EMI will be </Typography>
+                            <Typography variant='h2' sx={{textAlign: 'center', fontSize: '2.3rem', mb:2}}> Your Monthly EMI will be </Typography>
                             
                             <Box sx={{backgroundColor: '#5B122D', borderRadius:2, mb: 3}}> 
-                                <Typography variant='h3' 
-                                sx={{ margin:2, fontSize:'2.3rem', color:'background.secondary'}}> 
+                                <Typography variant='h4' 
+                                sx={{ margin:2, fontSize:'2rem', color:'background.secondary'}}> 
                                     {"₹ " + EMI(values)} 
                                 </Typography>
                             </Box>
