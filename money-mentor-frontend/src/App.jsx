@@ -6,11 +6,13 @@ import Home from "./Pages/Home";
 import LoanPage from './Pages/LoanPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
-import { Button } from "@mui/material"
+import { Button } from "@mui/material";
+import { Box } from "@mui/material";
 
 function App() {
     return (
     <BrowserRouter>
+    <Box sx={{minHeight: "100vh", backgroundColor: "#F4E1C6"}}>
       <div>
         <Header> 
           
@@ -24,6 +26,7 @@ function App() {
           <Route path="/taxestimator" element = {<TaxEstimator/>} />
         </Routes>
       </div>
+      </Box>
     </BrowserRouter>
   );
 }

@@ -12,10 +12,17 @@ function LoanPage() {
         },
         palette: {
             background: {
-                main: "#a2b0bbff"
+                primary: "#5B122D",
+                secondary: "#F4E1C6",
+
             },
             foreground: {
-                main: "#db8fd6ff"
+                primary: "#5B122D",
+                secondary: "#F4E1C6",
+            },
+            text: {
+                primary: "#5B122D",
+                secondary: "#F4E1C6",
             }
         },
     });
@@ -78,7 +85,8 @@ function EMI(values) {
                         width: 500,
                         borderRadius: 2,
                         display: 'flex',
-                        bgcolor: 'background.main',
+                        bgcolor: 'background.primary',
+                        color: 'text.secondary',
                         flexDirection: 'column',
                         alignItems: 'left',
                         p: 3
@@ -112,22 +120,24 @@ function EMI(values) {
                         width: 500,
                         borderRadius: 2,
                         display: 'flex',
-                        bgcolor: 'background.main',
+                        bgcolor: 'background.primary',
                         flexDirection: 'column',
                         alignItems: 'left',
                         p: 3
                     }}>
                         <Box 
-                        sx={{backgroundColor:'#ced5d6ff', 
+                        sx={{backgroundColor:'background.secondary', 
                             height: '100%', display: 'flex',
                             flexDirection: 'column',
+                            justifyContent: 'center',
                             alignItems: 'center',
+                            alignContent: 'center',
                             }}> 
                             <Typography variant='h4' sx={{textAlign: 'center', fontSize: '3rem', mb:2}}> Your Monthly EMI will be </Typography>
                             
-                            <Box sx={{backgroundColor: '#536c6fff', borderRadius:2, mb: 3}}> 
+                            <Box sx={{backgroundColor: '#5B122D', borderRadius:2, mb: 3}}> 
                                 <Typography variant='h3' 
-                                sx={{ margin:2, fontSize:'2.3rem', color:'#f0eee2ff'}}> 
+                                sx={{ margin:2, fontSize:'2.3rem', color:'background.secondary'}}> 
                                     {"₹ " + EMI(values)} 
                                 </Typography>
                             </Box>
