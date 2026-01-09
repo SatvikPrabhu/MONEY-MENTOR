@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { TextField, Button, Box, Typography } from '@mui/material';
+import { TextField, Button, Box, Typography, createTheme, ThemeProvider } from '@mui/material';
 
 function SignUpBox() {
     const [username, setUsername] = useState('');
@@ -26,51 +26,51 @@ function SignUpBox() {
     }
 
     return (
-    <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4, p: 3 }}>
-        <Typography variant="h4" textAlign="center">Sign Up</Typography>
-        <form onSubmit={handleSubmit}> 
-            <TextField 
-                fullWidth
-                label="Username"
-                value={username}
-                onChange={handleUsernameChange}
-                margin="normal"
-            />
-            <TextField 
-                fullWidth
-                label="Password"
-                type="password"
-                value={password}
-                onChange={handlePasswordChange}
-                margin="normal"
-            />
-            <TextField 
-                fullWidth
-                label="Confirm Password"
-                type="password"
-                value={confirmPass}
-                onChange={passConfirmer}
-                margin="normal"
-                helperText={confirmPass && !(password === confirmPass) ? "Passwords don't match" : ""}
-                FormHelperTextProps={{
-                    sx: { 
-                        color: 'red',
-                        fontWeight: 'bold'
-                    }
-                }}
-            />
-            <Button 
-                type="submit"
-                variant="contained" 
-                color="primary"
-                fullWidth
-                sx={{ mt: 2 }}
-                disabled = {!username || !password || (password !== confirmPass)}
-            >
-                Sign Up
-            </Button>
-        </form>
-    </Box>
+            <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4, p: 3 }}>
+            <Typography variant="h4" textAlign="center">Sign Up</Typography>
+            <form onSubmit={handleSubmit}> 
+                <TextField 
+                    fullWidth
+                    label="Username"
+                    value={username}
+                    onChange={handleUsernameChange}
+                    margin="normal"
+                />
+                <TextField 
+                    fullWidth
+                    label="Password"
+                    type="password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                    margin="normal"
+                />
+                <TextField 
+                    fullWidth
+                    label="Confirm Password"
+                    type="password"
+                    value={confirmPass}
+                    onChange={passConfirmer}
+                    margin="normal"
+                    helperText={confirmPass && !(password === confirmPass) ? "Passwords don't match" : ""}
+                    FormHelperTextProps={{
+                        sx: { 
+                            color: 'red',
+                            fontWeight: 'bold'
+                        }
+                    }}
+                />
+                <Button 
+                    type="submit"
+                    variant="contained" 
+                    color="primary"
+                    fullWidth
+                    sx={{ mt: 2 }}
+                    disabled = {!username || !password || (password !== confirmPass)}
+                >
+                    Sign Up
+                </Button>
+            </form>
+            </Box>
     );
 }
 
