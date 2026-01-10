@@ -2,6 +2,7 @@ import {Button, Box, Typography} from "@mui/material";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useRef } from "react";
 import IntroductionToFeature from "../Components/IntroductionToFeature";
+import AgeSlider from "../Components/TaxEstimator/AgeSlider";
 
 function TaxEstimator() {
     const formSectionRef = useRef(null);    
@@ -68,7 +69,9 @@ function TaxEstimator() {
             <Typography variant="h5" sx={{ mb: 2, fontWeight: 'bold' }}>
                 Personal Details
             </Typography>
-            
+            <Box>
+                <AgeSlider/>
+            </Box>
         </Box>
         
         {/* Income/Deductions Section */}
