@@ -1,11 +1,15 @@
 import {Button, Box, Typography} from "@mui/material";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import IntroductionToFeature from "../Components/IntroductionToFeature";
 import AgeSlider from "../Components/TaxEstimator/AgeSlider";
+import ResidentialSwitch from "../Components/TaxEstimator/ResidentialSwitch";
 
 function TaxEstimator() {
-    const formSectionRef = useRef(null);    
+    const formSectionRef = useRef(null); 
+    const [ageGroup, setAgeGroup] = useState(1);
+    const [isNRI, setIsNRI] = useState(false);
+
     const scrollToForm = () => {
         formSectionRef.current?.scrollIntoView({ 
             behavior: 'smooth',
@@ -70,7 +74,10 @@ function TaxEstimator() {
                 Personal Details
             </Typography>
             <Box>
-                <AgeSlider/>
+                <AgeSlider value={ageGroup} onChange={setAgeGroup} />
+            </Box>
+            <Box> 
+                <ResidentialSwitch value={isNRI} onChange={setIsNRI} />
             </Box>
         </Box>
         

@@ -6,7 +6,6 @@ import Home from "./Pages/Home";
 import LoanPage from './Pages/LoanPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
-import { Button } from "@mui/material";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 
 const theme = createTheme({
