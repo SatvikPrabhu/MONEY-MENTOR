@@ -110,6 +110,7 @@ function TaxEstimator() {
             <SalarySlider value={salary} onChange={setSalary} />
             </Box>
             
+            
         </Box>
     </Box>
 </ThemeProvider>
