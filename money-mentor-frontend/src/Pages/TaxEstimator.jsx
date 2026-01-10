@@ -5,12 +5,14 @@ import IntroductionToFeature from "../Components/IntroductionToFeature";
 import AgeSlider from "../Components/TaxEstimator/AgeSlider";
 import ResidentialSwitch from "../Components/TaxEstimator/ResidentialSwitch";
 import FinancialYearDropdown from "../Components/TaxEstimator/FYDropdown";
+import SalarySlider from "../Components/TaxEstimator/SalarySlider";
 
 function TaxEstimator() {
     const formSectionRef = useRef(null); 
     const [ageGroup, setAgeGroup] = useState(1);
     const [isNRI, setIsNRI] = useState(false);
     const [financialYear, setFinancialYear] = useState('2024-2025');
+    const[salary, setSalary] = useState(500000);
 
     const scrollToForm = () => {
         formSectionRef.current?.scrollIntoView({ 
@@ -103,6 +105,10 @@ function TaxEstimator() {
             <Typography variant="h5" sx={{ mb: 2, fontWeight: 'bold' }}>
                 Income & Deductions
             </Typography>
+
+            <Box sx={{ mb: 3 }}>
+            <SalarySlider value={salary} onChange={setSalary} />
+            </Box>
             
         </Box>
     </Box>
