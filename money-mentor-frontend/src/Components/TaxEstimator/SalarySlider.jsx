@@ -55,7 +55,7 @@ export default function SalarySlider({ value, onChange }) {
           { value: 500000, label: "₹5L" },
           { value: 1000000, label: "₹10L" },
           { value: 2000000, label: "₹20L" },
-          { value: 5000000, label: "₹50L" },
+          { value: 5000000, label: "₹50L+" },
         ]}
         sx={{
           color: "text.secondary",
