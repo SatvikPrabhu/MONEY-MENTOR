@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import { Box, Typography, Slider } from '@mui/material';
 import AGE1 from './Images/AGE1.png';
 import AGE2 from './Images/AGE2.png';
 import AGE3 from './Images/AGE3.png';
 import AGE4 from './Images/AGE4.png';
 
-export default function AgeSlider() {
-  const [ageGroup, setAgeGroup] = useState(1); // 0: Teenager, 1: Young Adult, 2: Mid Adult, 3: Elderly
+export default function AgeSlider({ value, onChange }) {
   
   const ageRanges = [
     { label: 'Teenager (13-19)', image: AGE1, value: 0 },
@@ -16,7 +14,7 @@ export default function AgeSlider() {
   ];
   
   const handleChange = (event, newValue) => {
-    setAgeGroup(newValue);
+    onChange(newValue);
   };
   
   return (
@@ -27,15 +25,15 @@ export default function AgeSlider() {
         alignItems: 'center',
         mb: 3
       }}>
-        <Typography>What is your age? </Typography>
+        <Typography variant="h6"> What is your age? </Typography>
         <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'text.secondary' }}>
-          {ageRanges[ageGroup].label}
+          {ageRanges[value].label}
         </Typography>
       </Box>
       
       <Box sx={{ position: 'relative', px: 2, mt: 18}}>
         <Slider
-          value={ageGroup}
+          value={value}
           onChange={handleChange}
           min={0}
           max={3}
@@ -52,7 +50,7 @@ export default function AgeSlider() {
               boxShadow: 'none',
               borderRadius: '0',
               marginTop: '-90px',
-              backgroundImage: `url(${ageRanges[ageGroup].image})`,
+              backgroundImage: `url(${ageRanges[value].image})`,
               backgroundSize: 'contain',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
