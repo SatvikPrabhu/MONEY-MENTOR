@@ -1,10 +1,17 @@
 import {Button, Box, Typography} from "@mui/material";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import IntroductionToFeature from "../Components/IntroductionToFeature";
+import AgeSlider from "../Components/TaxEstimator/AgeSlider";
+import ResidentialSwitch from "../Components/TaxEstimator/ResidentialSwitch";
+import FinancialYearDropdown from "../Components/TaxEstimator/FYDropdown";
 
 function TaxEstimator() {
-    const formSectionRef = useRef(null);    
+    const formSectionRef = useRef(null); 
+    const [ageGroup, setAgeGroup] = useState(1);
+    const [isNRI, setIsNRI] = useState(false);
+    const [financialYear, setFinancialYear] = useState('2024-2025');
+
     const scrollToForm = () => {
         formSectionRef.current?.scrollIntoView({ 
             behavior: 'smooth',
@@ -42,7 +49,9 @@ function TaxEstimator() {
         caption="Free • No registration required • Takes 2 minutes"
         scrollFN={scrollToForm}        
     />
-    
+    <Box>
+        
+    </Box>
     <Box 
         ref={formSectionRef}  
         sx={{
@@ -68,7 +77,15 @@ function TaxEstimator() {
             <Typography variant="h5" sx={{ mb: 2, fontWeight: 'bold' }}>
                 Personal Details
             </Typography>
-            
+            <Box>
+                <AgeSlider value={ageGroup} onChange={setAgeGroup} />
+            </Box>
+            <Box> 
+                <ResidentialSwitch value={isNRI} onChange={setIsNRI} />
+            </Box>
+            <Box> 
+                <FinancialYearDropdown value={financialYear} onChange={setFinancialYear} />
+            </Box>
         </Box>
         
         {/* Income/Deductions Section */}
