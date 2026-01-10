@@ -102,7 +102,9 @@ export default function AgeSlider({ value, onChange }) {
           </Typography>
         </Box>
       </Box>
-      
+      <Typography variant="caption" sx={{ display: 'block', mt: 1, opacity: 0.7 }}>
+        Selected: {ageRanges[value].label}
+      </Typography>
     </Box>
   );
 }
