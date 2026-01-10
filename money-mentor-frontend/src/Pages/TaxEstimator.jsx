@@ -1,12 +1,26 @@
-import {Button, Box} from "@mui/material";
+import {Button, Box, Typography} from "@mui/material";
+import { useRef } from "react";
+import IntroductionToFeature from "../Components/IntroductionToFeature";
+
 function TaxEstimator() {
+    const formSectionRef = useRef(null);    
+    const scrollToForm = () => {
+        formSectionRef.current?.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    };      
     return <div> 
-        <Box sx={{height:500, backgroundColor:'#3a6890e1'}}>
-            <Box> 
-            <Button sx={{backgroundColor:'#94bfe4e1', height:80, width:230, fontSize: '1.7rem'}}> 
-                Get Started!
-            </Button>
-            </Box>
+        <IntroductionToFeature 
+            title="Tax Estimator"
+            description="Calculate your estimated income tax based on your salary, 
+                deductions, and investments. Get instant results and plan 
+                your finances better."
+            caption="Free - No registration required - Takes 2 minutes"
+            scrollFN={scrollToForm}        
+        />
+        <Box ref={formSectionRef} sx={{height:1000}}>
+
         </Box>
     </div>;
 }

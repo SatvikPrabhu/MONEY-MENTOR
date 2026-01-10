@@ -10,7 +10,7 @@ function SliderWithHeading(props) {
                 {props.heading}            
             </Typography>
             <Box sx={{backgroundColor:'#ced5d6ff', borderRadius:5}}>
-                <Typography variant="h4" sx={{ margin:2, fontSize:'1.4rem', }} >
+                <Typography variant="h4" sx={{ margin:2, fontSize:'1.4rem', color:'rgba(41, 44, 29)'}} >
                     {props.displayVal}
                 </Typography>
             </Box>
