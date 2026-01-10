@@ -47,10 +47,11 @@ function TaxEstimator() {
         title="Tax Estimator"
         description="Calculate your estimated income tax based on your salary, deductions, and investments. Get instant results and plan your finances better."
         caption="Free • No registration required • Takes 2 minutes"
+        helperText="Below mentioned is some theory about how taxes work in our country. To head straight to the taxes estimator, click this button below."
         scrollFN={scrollToForm}        
     />
     <Box>
-        
+        {/* TAXES THEORY */}
     </Box>
     <Box 
         ref={formSectionRef}  

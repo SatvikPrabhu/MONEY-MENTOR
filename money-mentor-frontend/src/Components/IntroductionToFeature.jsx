@@ -29,15 +29,24 @@ function IntroductionToFeature(props) {
             <Typography variant="h6" sx={{ 
                 mb: 5, 
                 textAlign: 'center', 
-                maxWidth: 700,
+                maxWidth: 900,
                 lineHeight: 2.2,
                 opacity: 0.95
             }}>
                 {props.description}
             </Typography>
-            
+            <Typography variant="h6" sx={{ 
+                mt: 5, 
+                textAlign: 'center', 
+                fontSize:15,
+                opacity: 0.95
+            }}>
+                {props.helperText}
+            </Typography>
             <Button sx={{
                 backgroundColor: '#94bfe4e1', 
+                mt:2,
+                mb:5,
                 height: 80, 
                 width: 250, 
                 fontSize: '1.7rem',
@@ -57,7 +66,7 @@ function IntroductionToFeature(props) {
                 Get Started!
             </Button>
             
-            <Typography variant="caption" sx={{ mt: 15, opacity: 0.8 }}>
+            <Typography variant="caption" sx={{ mt: 2, opacity: 0.8, fontSize:15 }}>
                 {props.caption}
             </Typography>
         </Box>
