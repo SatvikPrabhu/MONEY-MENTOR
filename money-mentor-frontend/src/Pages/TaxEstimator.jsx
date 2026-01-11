@@ -6,7 +6,7 @@ import AgeSlider from "../Components/TaxEstimator/AgeSlider";
 import ResidentialSwitch from "../Components/TaxEstimator/ResidentialSwitch";
 import FinancialYearDropdown from "../Components/TaxEstimator/FYDropdown";
 import SalarySlider from "../Components/TaxEstimator/SalarySlider";
-
+import CustomTable from "../Components/customTable";
 function TaxEstimator() {
     const formSectionRef = useRef(null); 
     const [ageGroup, setAgeGroup] = useState(1);
@@ -30,6 +30,7 @@ function TaxEstimator() {
                 background: {
                     primary: "#5B122D",
                     secondary: "#F4E1C6",
+                    teriary:"#d3c5b2ff"
     
                 },
                 foreground: {
@@ -65,13 +66,11 @@ function TaxEstimator() {
 
         <Box sx={{ 
             color: 'text.primary',
-            pl: 10,
-            pr:10,
+            px:20,
             pt:5, 
             borderRadius: 2, 
             mt:4,
             mb: 4,
-            boxShadow: 2
         }}>
             <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 3 }}>
             What is the new tax regime?
@@ -82,17 +81,40 @@ function TaxEstimator() {
                 <br/>
                 From FY 2023-24 onwards, the New Tax Regime is the <strong>default</strong> tax regime for individual taxpayers. However, taxpayers can still choose the Old Tax Regime if it is more beneficial for them.
             </Typography>
-            {/* Old Regime */}
+            
             <Box sx={{ mb: 4, mt:2 }}>
                 <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 2 }}>
                     Slabs
                 </Typography>
-                <Typography variant="body1" sx={{ mb: 2 }}>
+                <Typography variant="body1" sx={{ mb: 2, fontSize:20}}>
                     Tax slabs are predefined income ranges, where each range is taxed at a specific rate.
                     <br/>
-                    Your entire income is not taxed at one single rate. Instead, different portions of your income are taxed at different rates as you move through the slabs.
+                    Your entire income is not taxed at one single rate. Instead, different portions of your income are taxed a`t different rates as you move through the slabs.
                 </Typography>
-            {/* Add table or list of tax slabs here */}
+                <Box sx={{ mt: 4 }}>
+                    <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 2 }}>
+                        New Tax Regime Slab Rates (FY 2024-25)
+                    </Typography>
+
+                    <Typography sx={{ fontSize: 20, mb: 3 }}>
+                        Under the New Tax Regime, income is taxed progressively based on predefined slabs.
+                        These slab rates apply uniformly to all individuals, regardless of age.
+                    </Typography>
+                    <Box sx={{px:25}}>
+                        <CustomTable 
+                            headers={['Annual Taxable Income', 'Tax Rate']}
+                            data={[
+                                ['Up to ₹3,00,000', 'Nil'],
+                                ['₹3,00,001 - ₹6,00,000', '5%'],
+                                ['₹6,00,001 - ₹9,00,000', '10%'],
+                                ['₹9,00,001 - ₹12,00,000', '15%'],
+                                ['₹12,00,001 - ₹15,00,000', '20%'],
+                                ['₹15,00,001+', '30%']
+                            ]
+                            }
+                        />
+                    </Box> 
+                </Box>
             </Box>
         </Box>
     </Box>
