@@ -45,9 +45,7 @@ function App() {
       <BrowserRouter>
       <Box sx={{minHeight: "100vh", backgroundColor: "#F4E1C6"}}>
         {/* <div> */}
-          <Header> 
-          
-          </Header>
+
           <Routes>
             <Route path="/home" element={<Home/>} />
             <Route path="/login" element={<Login />} />
