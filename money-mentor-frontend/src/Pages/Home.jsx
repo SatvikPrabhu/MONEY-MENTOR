@@ -56,10 +56,15 @@ function Home() {
         {/* Intro */ }
         </Box>
 
-        <Box sx={{display:'flex', gap: '200px'}}>
-            <HomePageCard frontText="Learn"/>
-            <HomePageCard frontText="Plan"/>
-            <HomePageCard frontText="Track"/>
+        <Box sx={{display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: 50,
+            padding: 5,
+            minHeight: '400px'}}>
+                <HomePageCard frontText="LEARN"/>
+                <HomePageCard frontText="PLAN"/>
+                <HomePageCard frontText="TRACK"/>
         </Box>
     </Box>
     </ThemeProvider>

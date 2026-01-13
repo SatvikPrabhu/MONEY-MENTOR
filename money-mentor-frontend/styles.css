@@ -24,6 +24,12 @@ header {
  }
 }
 
+.roboto-slab-CardText {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 
 .typewriter-text {
  display: inline-block;
@@ -59,7 +65,9 @@ header {
   transition: all 0.5s ease;
 }
 .MainPage-card-theCard:hover {
-  transform: rotateY(180deg);
+  transform: translateY(-80px);
+  box-shadow: 6;
+  transform: translateY(-8px) rotateY(180deg);
 }
 .MainPage-card-front {
   position: absolute;

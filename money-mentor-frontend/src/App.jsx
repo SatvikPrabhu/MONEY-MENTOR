@@ -43,8 +43,8 @@ function App() {
     return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-      <Box id="app-container" sx={{minHeight: "100vh", backgroundColor: "#F4E1C6"}}>
-        {/* <div> */}
+      <Box id="app-container" sx={{minHeight: "100vh", backgroundColor: 'background.secondary'}}>
+        
 
           <Routes>
             <Route path="/home" element={<Home/>} />
