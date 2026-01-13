@@ -10,7 +10,8 @@ import {
   ThemeProvider
 } from '@mui/material';
 import { Link } from 'react-router-dom';
-import '../../styles.css';
+import { useEffect } from 'react';
+import HomePageCard from '../Components/HomePageCard';
 
 const theme = createTheme({
             typography: {
@@ -21,7 +22,7 @@ const theme = createTheme({
                 background: {
                     primary: "#5B122D",
                     secondary: "#F4E1C6",
-                    teriary:"#d3c5b2ff"
+                    tertiary:"#a6757a"
     
                 },
                 foreground: {
@@ -36,25 +37,31 @@ const theme = createTheme({
         });
 
 function Home() {
+    useEffect(() => {
+        const appContainer = document.getElementById('app-container');
+        if (appContainer) {
+            appContainer.style.backgroundColor = theme.palette.background.primary;
+        }
+
+        return () => {
+            if (appContainer) {
+                appContainer.style.backgroundColor = '#F4E1C6';
+            }
+        };
+    }, []);
   return (
     <ThemeProvider theme={theme}>
-    <div>
-      <Box sx={{
-        backgroundColor: 'background.primary',
-      }}>
-        <p>first</p>
-      </Box>
-      <Box sx={{
-        backgroundColor: 'background.primary',
-      }}>
-        <p>second</p>
-      </Box>
-      <Box sx={{
-        backgroundColor: 'background.primary',
-      }}>
-        <p>third</p>
-      </Box>
-    </div>
+    <Box >
+        <Box> 
+        {/* Intro */ }
+        </Box>
+
+        <Box sx={{display:'flex', gap: '200px'}}>
+            <HomePageCard frontText="Learn"/>
+            <HomePageCard frontText="Plan"/>
+            <HomePageCard frontText="Track"/>
+        </Box>
+    </Box>
     </ThemeProvider>
   );
 }

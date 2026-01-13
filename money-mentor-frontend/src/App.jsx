@@ -43,7 +43,7 @@ function App() {
     return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-      <Box sx={{minHeight: "100vh", backgroundColor: "#F4E1C6"}}>
+      <Box id="app-container" sx={{minHeight: "100vh", backgroundColor: "#F4E1C6"}}>
         {/* <div> */}
 
           <Routes>

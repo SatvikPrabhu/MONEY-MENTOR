@@ -47,12 +47,32 @@ header {
  }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #F4E1C6;
+.MainPage-card-container {
+  position: relative;
 }
 
-html {
-  background-color: #F4E1C6;
+.MainPage-card-theCard {
+  position: absolute;
+  width:100%;
+  height:100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+.MainPage-card-theCard:hover {
+  transform: rotateY(180deg);
+}
+.MainPage-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  backface-visibility: hidden;
+}
+
+.MainPage-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
