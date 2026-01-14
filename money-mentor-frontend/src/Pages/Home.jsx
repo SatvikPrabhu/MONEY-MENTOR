@@ -52,7 +52,7 @@ function Home() {
   return (
     <ThemeProvider theme={theme}>
     <Box >
-        <Box> 
+        <Box sx={{height:'100vh'}}> 
         {/* Intro */ }
         </Box>
 
@@ -61,10 +61,56 @@ function Home() {
             alignItems: 'center',
             gap: 50,
             padding: 5,
-            minHeight: '400px'}}>
-                <HomePageCard frontText="LEARN"/>
-                <HomePageCard frontText="PLAN"/>
-                <HomePageCard frontText="TRACK"/>
+            minHeight: '400px',
+            height:'100vh'}}>
+                <HomePageCard 
+                    frontText="LEARN"
+                    buttons={[
+                    {
+                        text: 'Loans',
+                        link: '/loanpage'
+                    },
+                    {
+                        text: 'Accounts',
+                        link: '/resources'
+                    },
+                    {
+                        text: 'Taxes',
+                        link: '/taxestimator'
+                    }
+                ]} />
+                <HomePageCard 
+                    frontText="PLAN"
+                    buttons={[
+                    {
+                        text: 'Budget Planner',
+                        link: '/budgetplanner'
+                    },
+                    {
+                        text: 'Accounts',
+                        link: '/resources'
+                    },
+                    {
+                        text: 'Taxes',
+                        link: '/taxestimator'
+                    }
+                ]} />
+                <HomePageCard 
+                    frontText="TRACK"
+                    buttons={[
+                    {
+                        text: 'Dashboard',
+                        link: '/budgetplanner'
+                    },
+                    {
+                        text: 'Transaction',
+                        link: '/resources'
+                    },
+                    {
+                        text: 'Quizzes',
+                        link: '/taxestimator'
+                    }
+                ]} />
         </Box>
     </Box>
     </ThemeProvider>
