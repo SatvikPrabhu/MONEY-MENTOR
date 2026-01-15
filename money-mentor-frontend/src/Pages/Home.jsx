@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import HomePageCard from '../Components/HomePageCard';
+import HomePageCard from '../Components/HomePage/HomePageCard';
 
 const theme = createTheme({
             typography: {
@@ -52,8 +52,11 @@ function Home() {
   return (
     <ThemeProvider theme={theme}>
     <Box >
-        <Box sx={{height:'100vh'}}> 
+        <Box sx={{height:'100vh', display:'flex', alignItems:'center'}}> 
         {/* Intro */ }
+            <Box sx={{height:'45vh', width:'100vw'}}>
+                
+            </Box>
         </Box>
 
         <Box sx={{display: 'flex',

@@ -9,7 +9,6 @@ import {
   ThemeProvider
 } from '@mui/material';
 import { Link } from 'react-router-dom';
-import '../../styles.css';
 
 function HomePageCard(props){
     return (
