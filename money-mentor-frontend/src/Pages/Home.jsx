@@ -10,7 +10,7 @@ import {
   ThemeProvider
 } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import HomePageCard from '../Components/HomePage/HomePageCard';
 import IntroductionToFeature from '../Components/IntroductionToFeature';
 
@@ -38,6 +38,13 @@ const theme = createTheme({
         });
 
 function Home() {
+    const cardSectionRef = useRef(null); 
+    const scrollToCards = () => {
+        cardSectionRef.current?.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    };   
     useEffect(() => {
         const appContainer = document.getElementById('app-container');
         if (appContainer) {
@@ -53,11 +60,24 @@ function Home() {
   return (
     <ThemeProvider theme={theme}>
     <Box >
-        <Box sx={{height:'100vh', display:'flex', alignItems:'center'}}> 
-            <IntroductionToFeature/>
+        <Box sx={{height:'100vh', display:'flex', alignItems:'center', justifyContent:'center'}}> 
+            <IntroductionToFeature
+                backgroundboxsx={{height:300}}
+                btnsx={{ml:40, 
+                        height:60, 
+                        fontSize:30, 
+                        fontFamily:'Montserrat', 
+                        backgroundColor:'background.tertiary',
+                        color:'background.primary'
+                    }}
+                btntext="Get Started!"
+                title="Welcome to Money Mentor!"
+                scrollFN={scrollToCards}/>
         </Box>
 
-        <Box sx={{display: 'flex',
+        <Box 
+            ref={cardSectionRef}
+            sx={{display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             gap: 50,
