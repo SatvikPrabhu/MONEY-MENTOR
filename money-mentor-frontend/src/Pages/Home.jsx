@@ -90,11 +90,11 @@ function Home() {
                         link: '/budgetplanner'
                     },
                     {
-                        text: 'Accounts',
+                        text: 'Loan Calculator',
                         link: '/resources'
                     },
                     {
-                        text: 'Taxes',
+                        text: 'Tax Estimator',
                         link: '/taxestimator'
                     }
                 ]} />
