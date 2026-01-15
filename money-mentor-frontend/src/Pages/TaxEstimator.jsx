@@ -48,9 +48,44 @@ function TaxEstimator() {
         <ThemeProvider theme={theme}>
     <IntroductionToFeature 
         title="Tax Estimator"
+        backgroundboxsx={{
+            height: 500, 
+            backgroundColor: '#3a6890e1', 
+            width: 1200, 
+            marginTop: 10,
+            marginLeft: 'auto',       
+            marginRight: 'auto',
+            borderRadius: 2,
+            display: 'flex',
+            flexDirection: 'column',      
+            alignItems: 'center',         
+            justifyContent: 'center',     
+            p: 5,
+            color: 'white',
+            boxShadow: 3
+        }}
+        btnsx={{
+                backgroundColor: '#94bfe4e1', 
+                mt:2,
+                mb:5,
+                height: 80, 
+                width: 250, 
+                fontSize: '1.7rem',
+                fontWeight: 'bold',
+                color: '#1a3a52',
+                borderRadius: 2,
+                boxShadow: 2,
+                '&:hover': { 
+                    backgroundColor: '#7aa8c9',
+                    boxShadow: 4,
+                    transform: 'translateY(-2px)',
+                    transition: 'all 0.3s'
+                }
+            }}
         description="Calculate your estimated income tax based on your salary, deductions, and investments. Get instant results and plan your finances better."
         caption="Free • No registration required • Takes 2 minutes"
         helperText="Below mentioned is some theory about how taxes work in our country. To head straight to the taxes estimator, click this button below."
+        btntext="Get Started!"
         scrollFN={scrollToForm}        
     />
     <Box>

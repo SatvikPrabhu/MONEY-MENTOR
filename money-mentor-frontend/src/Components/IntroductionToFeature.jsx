@@ -2,22 +2,7 @@ import {Button, Box, Typography} from "@mui/material";
 
 function IntroductionToFeature(props) {
     return <div> 
-        <Box sx={{
-            height: 500, 
-            backgroundColor: '#3a6890e1', 
-            width: 1200, 
-            marginTop: 10,
-            marginLeft: 'auto',       
-            marginRight: 'auto',
-            borderRadius: 2,
-            display: 'flex',
-            flexDirection: 'column',      
-            alignItems: 'center',         
-            justifyContent: 'center',     
-            p: 5,
-            color: 'white',
-            boxShadow: 3
-        }}>
+        <Box sx={props.backgroundboxsx}>
             <Typography variant="h2" sx={{ 
                 mb: 3, 
                 textAlign: 'center', 
@@ -43,27 +28,10 @@ function IntroductionToFeature(props) {
             }}>
                 {props.helperText}
             </Typography>
-            <Button sx={{
-                backgroundColor: '#94bfe4e1', 
-                mt:2,
-                mb:5,
-                height: 80, 
-                width: 250, 
-                fontSize: '1.7rem',
-                fontWeight: 'bold',
-                color: '#1a3a52',
-                borderRadius: 2,
-                boxShadow: 2,
-                '&:hover': { 
-                    backgroundColor: '#7aa8c9',
-                    boxShadow: 4,
-                    transform: 'translateY(-2px)',
-                    transition: 'all 0.3s'
-                }
-            }}
+            <Button sx={props.btnsx}
             onClick={props.scrollFN}
             > 
-                Get Started!
+                {props.btntext}
             </Button>
             
             <Typography variant="caption" sx={{ mt: 2, opacity: 0.8, fontSize:15 }}>

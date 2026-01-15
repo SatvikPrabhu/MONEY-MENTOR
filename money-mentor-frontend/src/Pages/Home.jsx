@@ -12,6 +12,7 @@ import {
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import HomePageCard from '../Components/HomePage/HomePageCard';
+import IntroductionToFeature from '../Components/IntroductionToFeature';
 
 const theme = createTheme({
             typography: {
@@ -53,10 +54,7 @@ function Home() {
     <ThemeProvider theme={theme}>
     <Box >
         <Box sx={{height:'100vh', display:'flex', alignItems:'center'}}> 
-        {/* Intro */ }
-            <Box sx={{height:'45vh', width:'100vw'}}>
-                
-            </Box>
+            <IntroductionToFeature/>
         </Box>
 
         <Box sx={{display: 'flex',
