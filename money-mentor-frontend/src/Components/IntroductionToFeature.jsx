@@ -15,7 +15,7 @@ function IntroductionToFeature(props) {
                 mb: 5, 
                 textAlign: 'center', 
                 maxWidth: 900,
-                lineHeight: 2.2,
+                lineHeight: 2.5,
                 opacity: 0.95
             }}>
                 {props.description}

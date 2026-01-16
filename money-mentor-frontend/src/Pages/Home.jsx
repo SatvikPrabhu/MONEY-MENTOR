@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import HomePageCard from '../Components/HomePage/HomePageCard';
 import IntroductionToFeature from '../Components/IntroductionToFeature';
-
+import MoneyMentorIMG from "../Components/HomePage/MoneyMentor.png"
 const theme = createTheme({
             typography: {
                 fontFamily: 'Poppins, Arial, sans-serif',
@@ -59,21 +59,59 @@ function Home() {
     }, []);
   return (
     <ThemeProvider theme={theme}>
-    <Box >
-        <Box sx={{height:'100vh', display:'flex', alignItems:'center', justifyContent:'center'}}> 
-            <IntroductionToFeature
-                backgroundboxsx={{height:300}}
-                btnsx={{ml:40, 
-                        height:60, 
-                        fontSize:30, 
-                        fontFamily:'Montserrat', 
-                        backgroundColor:'background.tertiary',
-                        color:'background.primary'
-                    }}
+        <Box >
+            <Box sx={{
+                height: '100vh', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                px: 2 
+                }}> 
+                    <Box sx={{
+                        height: '40vh',
+                        maxWidth: 1200,
+                        width: '100%', 
+                        display: 'flex',
+                        gap: 4, 
+                        alignItems: 'center',
+                        flexWrap: { xs: 'wrap', md: 'nowrap' } 
+                    }}>
+                <IntroductionToFeature
+                backgroundboxsx={{
+                    height: 300, 
+                    color: 'background.secondary', 
+                    mt: 8
+                }}
+                btnsx={{
+                    width: 240,
+                    fontSize: 30, 
+                    ml:45,
+                    fontFamily: 'Montserrat', 
+                    backgroundColor: 'background.tertiary',
+                    color: 'background.secondary',
+                    '&:hover': {
+                    backgroundColor: 'background.secondary',
+                    color: 'background.primary'
+                    }
+                }}
                 btntext="Get Started!"
                 title="Welcome to Money Mentor!"
-                scrollFN={scrollToCards}/>
-        </Box>
+                description="Your educational platform to learn banking procedures and financial basics."
+                scrollFN={scrollToCards}
+                />
+                <Box
+                component="img"
+                src={MoneyMentorIMG}
+                alt="Money Mentor illustration"
+                sx={{
+                    height: '80%',
+                    maxWidth: '50%',
+                    objectFit: 'contain',
+                    display: { xs: 'none', md: 'block' } 
+                }}
+                />
+                </Box>
+            </Box>
 
         <Box 
             ref={cardSectionRef}

@@ -65,8 +65,7 @@ header {
   transition: all 0.5s ease;
 }
 .MainPage-card-theCard:hover {
-  transform: translateY(-80px);
-  box-shadow: 6;
+  box-shadow: 0 0 20px rgba(66, 153, 225, 0.8);
   transform: translateY(-8px) rotateY(180deg);
 }
 .MainPage-card-front {
