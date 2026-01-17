@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import LoanPage from './Pages/LoanPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
+import BudgetPlanner from './Pages/BudgetPlanner';
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 
 const theme = createTheme({
@@ -53,6 +54,7 @@ function App() {
             <Route path="/loanpage" element = {<LoanPage/>} />
             <Route path="/creditscore" element = {<CreditScore/>} />
             <Route path="/taxestimator" element = {<TaxEstimator/>} />
+            <Route path="/budgetplanner" element = {<BudgetPlanner/>} />
           </Routes>
         {/* </div> */}
         </Box>
