@@ -3,9 +3,9 @@ function LoanPageCard(props)
     return ( 
         <div className="loan-page-card">
             <div className="inside-loan-page">
-                {props.icon && <img src={props.icon} alt={props.title} />}
-                <h2>{props.title}</h2>
-                <p>{props.para}</p>
+                {props.icon}
+                <h2 style={{fontSize: 25}}>{props.title}</h2>
+                <p style={{fontSize: 20}}>{props.para}</p>
                 <button>Learn More</button>
             </div>
         </div>

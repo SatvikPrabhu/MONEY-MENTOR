@@ -113,6 +113,7 @@ header {
   gap: 30px;
   justify-content: space-evenly;
   padding: 120px 70px 0 70px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .loan-page-card {
@@ -129,4 +130,14 @@ header {
 .loan-page-card:nth-child(even) {
   margin-top: 80px;
 }
-`
+
+.inside-loan-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inside-loan-page h1 {
+  
+}

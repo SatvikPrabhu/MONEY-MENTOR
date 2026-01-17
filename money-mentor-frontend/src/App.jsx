@@ -3,7 +3,7 @@ import Login from './Pages/Login';
 import SignUp from "./Pages/SignUp";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
-import TypesofLoans from "./Components/LoanPage/TypesofLoans";
+import TypesofLoans from "./Pages/TypesofLoans";
 import LoanPage from './Pages/LoanPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
@@ -44,7 +44,7 @@ function App() {
     return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-      <Box id="app-container" sx={{minHeight: "100vh", backgroundColor: 'background.secondary'}}>
+      <Box id="app-container" sx={{minHeight: "100vh", backgroundColor: 'background.paper'}}>
         
 
           <Routes>
