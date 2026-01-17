@@ -68,6 +68,7 @@ header {
   box-shadow: 0 0 20px rgba(66, 153, 225, 0.8);
   transform: translateY(-8px) rotateY(180deg);
 }
+
 .MainPage-card-front {
   position: absolute;
   width: 100%;
@@ -83,3 +84,49 @@ header {
   backface-visibility: hidden;
   transform: rotateY(180deg);
 }
+
+.loans-h1 {
+  font-size: 62px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 0;
+  color: #5B122D;
+}
+
+.loans-p {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 65px 0 0 0;
+  color: #5B122D;
+}
+
+.loans-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loan-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-evenly;
+  padding: 120px 70px 0 70px;
+}
+
+.loan-page-card {
+  height: 370px;
+  width: 320px;
+  background-color: #5B122D;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F4E1C6;
+}
+
+.loan-page-card:nth-child(even) {
+  margin-top: 80px;
+}
+`
