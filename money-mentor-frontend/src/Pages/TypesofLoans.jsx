@@ -16,7 +16,7 @@ function TypesofLoans()
         </div>
         <div className="loan-cards">
             <LoanPageCard icon={<HomeIcon sx={{fontSize:70}}/>} title="HOME LOAN" para="for buying a house"/>
-            <LoanPageCard icon={<SchoolIcon sx={{fontSize:70}}/>} title="EDUCATION LOAN" para="for financing your education"/>
+            <LoanPageCard icon={<SchoolIcon sx={{fontSize:70}}/>} title="EDUCATION LOAN" para="for funding your education"/>
             <LoanPageCard icon={<PersonIcon sx={{fontSize:70}}/>} title="PERSONAL LOAN" para="for your personal needs"/>
             <LoanPageCard icon={<TimeToLeaveIcon sx={{fontSize:70}}/>} title="CAR LOAN" para="for purchasing a car"/>
             <LoanPageCard icon={<AutoAwesomeIcon sx={{fontSize:70}}/>} title="GOLD LOAN" para="loan against gold"/>
