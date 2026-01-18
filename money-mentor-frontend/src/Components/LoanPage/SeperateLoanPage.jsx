@@ -78,9 +78,7 @@ function SeperateLoanPage(){
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
-                padding: "40px 90px 30px 70px",
-                margin: "20px 20px 20px 20px ",
-                border: " 3px solid #5B122D"}}>
+                padding: "40px 90px 30px 70px",}}>
             <h1 className="loan-page-h1">{loan.title}</h1>
             <Box sx={{ display: "flex",
                 flexDirection: "row",
