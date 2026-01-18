@@ -15,11 +15,11 @@ function TypesofLoans()
             <h1 className="loans-h1">TYPES OF LOANS</h1>
         </div>
         <div className="loan-cards">
-            <LoanPageCard icon={<HomeIcon sx={{fontSize:70}}/>} title="HOME LOAN" para="for buying a house"/>
-            <LoanPageCard icon={<SchoolIcon sx={{fontSize:70}}/>} title="EDUCATION LOAN" para="for funding your education"/>
-            <LoanPageCard icon={<PersonIcon sx={{fontSize:70}}/>} title="PERSONAL LOAN" para="for your personal needs"/>
-            <LoanPageCard icon={<TimeToLeaveIcon sx={{fontSize:70}}/>} title="CAR LOAN" para="for purchasing a car"/>
-            <LoanPageCard icon={<AutoAwesomeIcon sx={{fontSize:70}}/>} title="GOLD LOAN" para="loan against gold"/>
+            <LoanPageCard icon={<HomeIcon sx={{fontSize:70}}/>} title="HOME LOAN" para="for buying a house" link="/loan/home"/>
+            <LoanPageCard icon={<SchoolIcon sx={{fontSize:70}}/>} title="EDUCATION LOAN" para="for funding your education" link="/loan/education"/>
+            <LoanPageCard icon={<PersonIcon sx={{fontSize:70}}/>} title="PERSONAL LOAN" para="for your personal needs" link="/loan/personal"/>
+            <LoanPageCard icon={<TimeToLeaveIcon sx={{fontSize:70}}/>} title="CAR LOAN" para="for purchasing a car" link="/loan/car"/>
+            <LoanPageCard icon={<AutoAwesomeIcon sx={{fontSize:70}}/>} title="GOLD LOAN" para="loan against gold" link="/loan/gold"/>
         </div>
         </div>
     )

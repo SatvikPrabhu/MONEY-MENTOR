@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function LoanPageCard(props)
 {
     return ( 
@@ -6,7 +8,7 @@ function LoanPageCard(props)
                 {props.icon}
                 <h2 style={{fontSize: 25}}>{props.title}</h2>
                 <p style={{fontSize: 20}}>{props.para}</p>
-                <button>Learn More</button>
+                <Link to={props.link}><button >Learn More</button></Link>
             </div>
         </div>
     )
