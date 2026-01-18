@@ -7,8 +7,8 @@ import TypesofLoans from "./Pages/TypesofLoans";
 import LoanPage from './Pages/LoanPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
-import { Box, createTheme, ThemeProvider } from "@mui/material";
-
+import { Box, ThemeProvider } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
     palette: {
         primary: {
