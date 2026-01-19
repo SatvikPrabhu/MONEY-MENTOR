@@ -1,4 +1,3 @@
-// import { styled } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
 import SchoolIcon from '@mui/icons-material/School';
 import PersonIcon from '@mui/icons-material/Person';
@@ -12,14 +11,14 @@ function TypesofAccounts()
         <div>
         <div className="loans-div">
             <p className="loans-p">LET'S EXPLORE</p>
-            <h1 className="loans-h1">TYPES OF LOANS</h1>
+            <h1 className="loans-h1">TYPES OF ACCOUNTS</h1>
         </div>
         <div className="loan-cards">
-            <LoanPageCard icon={<HomeIcon sx={{fontSize:70}}/>} title="HOME LOAN" para="for buying a house"/>
-            <LoanPageCard icon={<SchoolIcon sx={{fontSize:70}}/>} title="EDUCATION LOAN" para="for funding your education"/>
-            <LoanPageCard icon={<PersonIcon sx={{fontSize:70}}/>} title="PERSONAL LOAN" para="for your personal needs"/>
-            <LoanPageCard icon={<TimeToLeaveIcon sx={{fontSize:70}}/>} title="CAR LOAN" para="for purchasing a car"/>
-            <LoanPageCard icon={<AutoAwesomeIcon sx={{fontSize:70}}/>} title="GOLD LOAN" para="loan against gold"/>
+            <LoanPageCard icon={<HomeIcon sx={{fontSize:70}}/>} title="SAVINGS ACCOUNT" para="for everyday saving and spending"/>
+            <LoanPageCard icon={<SchoolIcon sx={{fontSize:70}}/>} title="CURRENT ACCOUNT" para="for businesses and frequent transactions"/>
+            <LoanPageCard icon={<PersonIcon sx={{fontSize:70}}/>} title="FIXED DEPOSIT" para="deposit money for a fixed period"/>
+            <LoanPageCard icon={<TimeToLeaveIcon sx={{fontSize:70}}/>} title="RECURRING DEPOSIT" para="save small amounts every month"/>
+            <LoanPageCard icon={<AutoAwesomeIcon sx={{fontSize:70}}/>} title="SALARY ACCOUNT" para="account for salaried individuals"/>
         </div>
         </div>
     )

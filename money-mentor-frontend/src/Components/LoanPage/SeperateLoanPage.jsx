@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import {Link} from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useParams } from "react-router-dom";
 import LoanSteps from "./LoanSteps";
@@ -252,6 +253,8 @@ function SeperateLoanPage() {
         <h1 className="loan-page-h1">{loan.title}</h1>
         <Box sx={{ display: "flex", flexDirection: "row", gap: 6 }}>
           <Button
+            component={Link}
+            to="/EligibilityLoan"
             variant="contained"
             sx={{
               backgroundColor: "#5B122D",

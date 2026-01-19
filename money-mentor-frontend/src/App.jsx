@@ -4,13 +4,14 @@ import SignUp from "./Pages/SignUp";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import TypesofLoans from "./Pages/TypesofLoans";
-import TypesofAccounts from "./Pages/TypesofLoans";
+import TypesofAccounts from "./Pages/TypesofAccounts";
 import LoanPage from './Pages/LoanPage';
 import SeperateLoanPage from './Components/LoanPage/SeperateLoanPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
 import { Box, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
+import EligibilityLoan from './Pages/Eligibilty_Loan';
 const theme = createTheme({
     palette: {
         primary: {
@@ -55,6 +56,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/loanpage" element = {<LoanPage/>} />
             <Route path="/loan/:loanType" element = {<SeperateLoanPage/>}/>
+            <Route path="/loan/eligibility" element = {<EligibilityLoan/>}/>
             <Route path="/typesofloan" element = {<TypesofLoans/>} />
             <Route path="/typesofaccounts" element = {<TypesofAccounts/>} />
             <Route path="/creditscore" element = {<CreditScore/>} />

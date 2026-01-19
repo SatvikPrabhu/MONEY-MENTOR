@@ -167,3 +167,16 @@ header {
   padding: 0px 0px 40px 40px;
   font-family:Arial, Helvetica, sans-serif;
 }
+
+.account-card {
+  height: 370px;
+  width: 350px;
+  background-color: #5B122D;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F4E1C6;
+  transition: transform 0.3ease, box-shadow 0.3ease;
+  box-shadow: 0 4px 6px rgb(0,0,0,0.1);
+}
