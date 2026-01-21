@@ -13,11 +13,37 @@ function LoginBox() {
         setPassword(event.target.value);
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Login attempt:', { username, password });
-        // Add login logic here 
+    const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  try {
+    const res = await fetch("http://localhost:5000/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert(data.msg || "Login failed");
+      return;
     }
+
+    console.log("Login success:", data);
+    localStorage.setItem("token", data.token); 
+
+    alert("Login successful!");
+    setUsername("");
+    setPassword("");
+  } catch (err) {
+    console.error(err);
+    alert("Server not reachable");
+  }
+};
+
 
     return (
     <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4, p: 3 }}>
