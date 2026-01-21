@@ -6,7 +6,7 @@ import AgeSlider from "../Components/TaxEstimator/AgeSlider";
 import ResidentialSwitch from "../Components/TaxEstimator/ResidentialSwitch";
 import FinancialYearDropdown from "../Components/TaxEstimator/FYDropdown";
 import SalarySlider from "../Components/TaxEstimator/SalarySlider";
-import CustomTable from "../Components/customTable";
+import CustomTable from "../Components/CustomTable";
 function TaxEstimator() {
     const formSectionRef = useRef(null); 
     const [ageGroup, setAgeGroup] = useState(1);
