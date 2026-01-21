@@ -5,132 +5,174 @@ import {
   CardActions,
   Button,
   Typography,
-  Grid
+  Grid,
+  createTheme,
+  ThemeProvider
 } from '@mui/material';
 import { Link } from 'react-router-dom';
-import '../../styles.css';
+import { useEffect, useRef } from 'react';
+import HomePageCard from '../Components/HomePage/HomePageCard';
+import IntroductionToFeature from '../Components/IntroductionToFeature';
+import MoneyMentorIMG from "../Components/HomePage/MoneyMentor.png"
+const theme = createTheme({
+            typography: {
+                fontFamily: 'Poppins, Arial, sans-serif',
+    
+            },
+            palette: {
+                background: {
+                    primary: "#5B122D",
+                    secondary: "#F4E1C6",
+                    tertiary:"#a6757a"
+    
+                },
+                foreground: {
+                    primary: "#5B122D",
+                    secondary: "#F4E1C6",
+                },
+                text: {
+                    primary: "#5B122D",
+                    secondary: "#F4E1C6",
+                }
+            },
+        });
 
 function Home() {
+    const cardSectionRef = useRef(null); 
+    const scrollToCards = () => {
+        cardSectionRef.current?.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    };   
+    useEffect(() => {
+        const appContainer = document.getElementById('app-container');
+        if (appContainer) {
+            appContainer.style.backgroundColor = theme.palette.background.primary;
+        }
+
+        return () => {
+            if (appContainer) {
+                appContainer.style.backgroundColor = '#F4E1C6';
+            }
+        };
+    }, []);
   return (
-    <Box
-      sx={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        pt: 4,          
-        px: 3
-      }}
-    >
-      {/* Heading */}
-      <Typography
-        variant="h3"
-        component="h1"
-        gutterBottom
-        className="typewriter-text"
-        align="center"
-      >
-        Welcome to MoneyMentor
-      </Typography>
+    <ThemeProvider theme={theme}>
+        <Box >
+            <Box sx={{
+                height: '100vh', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                px: 2 
+                }}> 
+                    <Box sx={{
+                        height: '40vh',
+                        maxWidth: 1200,
+                        width: '100%', 
+                        display: 'flex',
+                        gap: 4, 
+                        alignItems: 'center',
+                        flexWrap: { xs: 'wrap', md: 'nowrap' } 
+                    }}>
+                <IntroductionToFeature
+                backgroundboxsx={{
+                    height: 300, 
+                    color: 'background.secondary', 
+                    mt: 8
+                }}
+                btnsx={{
+                    width: 240,
+                    fontSize: 30, 
+                    ml:45,
+                    fontFamily: 'Montserrat', 
+                    backgroundColor: 'background.tertiary',
+                    color: 'background.secondary',
+                    '&:hover': {
+                    backgroundColor: 'background.secondary',
+                    color: 'background.primary'
+                    }
+                }}
+                btntext="Get Started!"
+                title="Welcome to Money Mentor!"
+                description="Your educational platform to learn banking procedures and financial basics."
+                scrollFN={scrollToCards}
+                />
+                <Box
+                component="img"
+                src={MoneyMentorIMG}
+                alt="Money Mentor illustration"
+                sx={{
+                    height: '80%',
+                    maxWidth: '50%',
+                    objectFit: 'contain',
+                    display: { xs: 'none', md: 'block' } 
+                }}
+                />
+                </Box>
+            </Box>
 
-      {/* Subtitle */}
-      <Typography
-        variant="body1"
-        align="center"
-        sx={{ maxWidth: 700, mb: 4 }}
-      >
-        Your personal finance companion. Get financial advice, tools, and loan
-        options to help you achieve your financial goals.
-      </Typography>
-
-      {/* Cards */}
-      <Grid
-        container
-        spacing={3}
-        justifyContent="center"
-        sx={{ maxWidth: 1200 }}
-      >
-        {[
-          {
-            title: 'Loan Calculator',
-            desc: 'Easily calculate your monthly payments, interest rates, and more.',
-            link: '/loanpage',
-            btn: 'Start Calculating',
-          },
-          {
-            title: 'Budget Planner',
-            desc: 'Track your expenses and set budgets to achieve your financial goals.',
-            link: '/budgetplanner',
-            btn: 'Start Planning',
-          },
-          {
-            title: 'Investment Guide',
-            desc: 'Learn the basics of investing and how to make your money work for you.',
-            link: '/investmentguide',
-            btn: 'Start Learning',
-          },
-          {
-            title: 'Credit Score Checker',
-            desc: 'Check your credit score and learn how to improve it.',
-            link: '/creditscore',
-            btn: 'Check Score',
-          },  
-          {
-            title: 'Savings Calculator',
-            desc: 'Plan your savings goals and track your progress.',
-            link: '/savingscalculator',
-            btn: 'Calculate Now',
-          },
-          {
-            title: 'Tax Estimator',
-            desc: 'Estimate your tax return and make informed decisions.',
-            link: '/taxestimator',
-            btn: 'Estimate Taxes',
-          },
-        ].map((item, index) => (
-          <Grid
-            item
-            key={index}
-            xs={12}
-            sm={6}
-            md={4}
-            display="flex"
-            justifyContent="center"
-          >
-            <Card
-              sx={{
-                width: 345,
-                boxShadow: 3,
-                borderRadius: 2,
-                transition: '0.3s',
-                '&:hover': {
-                  boxShadow: 6,
-                  transform: 'scale(1.05)',
-                },
-              }}
-            >
-              <CardContent>
-                <Typography variant="h5" align="center">
-                  {item.title}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  align="center"
-                >
-                  {item.desc}
-                </Typography>
-              </CardContent>
-              <CardActions sx={{ justifyContent: 'center' }}>
-                <Button variant="contained" component={Link} to={item.link}>
-                  {item.btn}
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+        <Box 
+            ref={cardSectionRef}
+            sx={{display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: 50,
+            padding: 5,
+            minHeight: '400px',
+            height:'100vh'}}>
+                <HomePageCard 
+                    frontText="LEARN"
+                    buttons={[
+                    {
+                        text: 'Loans',
+                        link: '/loanpage'
+                    },
+                    {
+                        text: 'Accounts',
+                        link: '/resources'
+                    },
+                    {
+                        text: 'Taxes',
+                        link: '/taxestimator'
+                    }
+                ]} />
+                <HomePageCard 
+                    frontText="PLAN"
+                    buttons={[
+                    {
+                        text: 'Budget Planner',
+                        link: '/budgetplanner'
+                    },
+                    {
+                        text: 'Loan Calculator',
+                        link: '/resources'
+                    },
+                    {
+                        text: 'Tax Estimator',
+                        link: '/taxestimator'
+                    }
+                ]} />
+                <HomePageCard 
+                    frontText="TRACK"
+                    buttons={[
+                    {
+                        text: 'Dashboard',
+                        link: '/budgetplanner'
+                    },
+                    {
+                        text: 'Transaction',
+                        link: '/resources'
+                    },
+                    {
+                        text: 'Quizzes',
+                        link: '/taxestimator'
+                    }
+                ]} />
+        </Box>
     </Box>
+    </ThemeProvider>
   );
 }
 
