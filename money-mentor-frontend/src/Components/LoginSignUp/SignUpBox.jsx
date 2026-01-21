@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { TextField, Button, Box, Typography } from '@mui/material';
+import { TextField, Button, Box, Typography, ThemeProvider } from '@mui/material';
 
 function SignUpBox() {
     const [username, setUsername] = useState('');
@@ -19,11 +19,35 @@ function SignUpBox() {
     }
     
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Sign Up:', { username, password });
-        // Add Sign Up logic here 
+    const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  try {
+    const res = await fetch("http://localhost:5000/api/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert(data.msg || "Signup failed");
+      return;
     }
+
+    alert("Signup successful! You can now log in.");
+    setUsername("");
+    setPassword("");
+    setConfPass("");
+  } catch (err) {
+    console.error(err);
+    alert("Server not reachable");
+  }
+};
+
 
     return (
             <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4, p: 3 }}>
