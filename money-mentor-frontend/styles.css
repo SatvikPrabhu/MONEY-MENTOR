@@ -68,6 +68,7 @@ header {
   box-shadow: 0 0 20px rgba(66, 153, 225, 0.8);
   transform: translateY(-8px) rotateY(180deg);
 }
+
 .MainPage-card-front {
   position: absolute;
   width: 100%;
@@ -82,4 +83,100 @@ header {
   height: 100%;
   backface-visibility: hidden;
   transform: rotateY(180deg);
+}
+
+.loans-h1 {
+  font-size: 62px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 0;
+  color: #5B122D;
+}
+
+.loans-p {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 65px 0 0 0;
+  color: #5B122D;
+}
+
+.loans-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loan-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-evenly;
+  padding: 120px 70px 0 70px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.loan-page-card {
+  height: 370px;
+  width: 350px;
+  background-color: #5B122D;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F4E1C6;
+  transition: transform 0.3ease, box-shadow 0.3ease;
+  box-shadow: 0 4px 6px rgb(0,0,0,0.1);
+}
+
+.loan-page-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 12px rgb(0,0,0,0.6);
+}
+
+.loan-page-card:nth-child(even) {
+  margin-top: 80px;
+}
+
+.inside-loan-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inside-loan-page button {
+    background-color: #F4E1C6;
+    color:#5B122D;
+    width: 110px;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loan-page-h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 48px;
+  color: #5B122D;
+  font-weight: 900;
+}
+
+.loan-page-h3 {
+  font-size: 25px;
+  padding: 0px 0px 40px 40px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.account-card {
+  height: 370px;
+  width: 350px;
+  background-color: #5B122D;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F4E1C6;
+  transition: transform 0.3ease, box-shadow 0.3ease;
+  box-shadow: 0 4px 6px rgb(0,0,0,0.1);
 }

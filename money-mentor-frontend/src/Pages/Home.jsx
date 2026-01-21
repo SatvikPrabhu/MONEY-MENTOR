@@ -131,7 +131,7 @@ function Home() {
                     },
                     {
                         text: 'Accounts',
-                        link: '/resources'
+                        link: '/typesofaccounts'
                     },
                     {
                         text: 'Taxes',
