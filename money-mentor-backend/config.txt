@@ -1,0 +1,1 @@
+dbUri = "mongodb+srv://satvikp:<db_password>@cluster0.k2nomcu.mongodb.net/?appName=Cluster0";
