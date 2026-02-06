@@ -14,28 +14,7 @@ import { useEffect, useRef } from 'react';
 import HomePageCard from '../Components/HomePage/HomePageCard';
 import IntroductionToFeature from '../Components/IntroductionToFeature';
 import MoneyMentorIMG from "../Components/HomePage/MoneyMentor.png";
-const theme = createTheme({
-            typography: {
-                fontFamily: 'Poppins, Arial, sans-serif',
-    
-            },
-            palette: {
-                background: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                    tertiary:"#a6757a"
-    
-                },
-                foreground: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                },
-                text: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                }
-            },
-        });
+import {theme} from "../App";
 
 function Home() {
     const cardSectionRef = useRef(null); 

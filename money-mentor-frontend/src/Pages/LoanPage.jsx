@@ -3,30 +3,10 @@ import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import {useState} from 'react';
 import SliderWithHeading from '../Components/LoanPage/SliderWithHeading';
+import {theme} from "../App.jsx"
 
 function LoanPage() {
-    const theme = createTheme({
-        typography: {
-            fontFamily: 'Poppins, Arial, sans-serif',
-
-        },
-        palette: {
-            background: {
-                primary: "#5B122D",
-                secondary: "#F4E1C6",
-
-            },
-            foreground: {
-                primary: "#5B122D",
-                secondary: "#F4E1C6",
-            },
-            text: {
-                primary: "#5B122D",
-                secondary: "#F4E1C6",
-            }
-        },
-    });
-
+    
     const [values, valueSetter] = useState({
         amt : 40000, tenure: 80, rate: 2.5
     });

@@ -52,7 +52,10 @@ header {
    opacity: 1; 
  }
 }
-
+.dashboard-bg {
+  background-color: #5B122D;
+  min-height: 100vh;
+}
 .MainPage-card-container {
   position: relative;
 }

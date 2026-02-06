@@ -12,24 +12,29 @@ import TaxEstimator from './Pages/TaxEstimator';
 import BudgetPlanner from './Pages/BudgetPlanner';
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 import EligibilityLoan from './Pages/Eligibilty_Loan';
-const theme = createTheme({
+import Dashboard from './Pages/Dashboard';
+
+export const theme = createTheme({
+    typography: {
+            fontFamily: 'Poppins, Arial, sans-serif',
+
+        },
     palette: {
-        primary: {
-            main: "#5B122D",
-            contrastText: "#F4E1C6",
-        },
-        secondary: {
-            main: "#5B122D",
-        },
-        background: {
-            default: "#5B122D",
-            paper: "#F4E1C6",
-        },
-        text: {
-            primary: "#5B122D",
-            secondary: "black",
-        }
-    },
+                background: {
+                    primary: "#5B122D",
+                    secondary: "#F4E1C6",
+                    tertiary:"#a6757a"
+    
+                },
+                foreground: {
+                    primary: "#5B122D",
+                    secondary: "#F4E1C6",
+                },
+                text: {
+                    primary: "#5B122D",
+                    secondary: "#F4E1C6",
+                }
+            },  
         components: {
             MuiOutlinedInput: {
                 styleOverrides: {
@@ -62,12 +67,14 @@ function App() {
             <Route path="/creditscore" element = {<CreditScore/>} />
             <Route path="/taxestimator" element = {<TaxEstimator/>} />
             <Route path="/budgetplanner" element = {<BudgetPlanner/>} />
+            <Route path="/dashboard" element = {<Dashboard/>} />
           </Routes>
-        {/* </div> */}
+        
         </Box>
       </BrowserRouter>
      </ThemeProvider>
   );
 }
 
-export default App
+export default App;
+

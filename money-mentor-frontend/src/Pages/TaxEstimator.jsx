@@ -7,6 +7,8 @@ import ResidentialSwitch from "../Components/TaxEstimator/ResidentialSwitch";
 import FinancialYearDropdown from "../Components/TaxEstimator/FYDropdown";
 import SalarySlider from "../Components/TaxEstimator/SalarySlider";
 import CustomTable from "../Components/CustomTable";
+import {theme} from "../App.jsx";
+
 function TaxEstimator() {
     const formSectionRef = useRef(null); 
     const [ageGroup, setAgeGroup] = useState(1);
@@ -20,29 +22,6 @@ function TaxEstimator() {
             block: 'start'
         });
     };      
-
-    const theme = createTheme({
-            typography: {
-                fontFamily: 'Poppins, Arial, sans-serif',
-    
-            },
-            palette: {
-                background: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                    teriary:"#d3c5b2ff"
-    
-                },
-                foreground: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                },
-                text: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                }
-            },
-        });
 
     return <div> 
         <ThemeProvider theme={theme}>
