@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import HomePageCard from '../Components/HomePage/HomePageCard';
 import IntroductionToFeature from '../Components/IntroductionToFeature';
-import MoneyMentorIMG from "../Components/HomePage/MoneyMentor.png"
+import MoneyMentorIMG from "../Components/HomePage/MoneyMentor.png";
 const theme = createTheme({
             typography: {
                 fontFamily: 'Poppins, Arial, sans-serif',
@@ -60,6 +60,48 @@ function Home() {
   return (
     <ThemeProvider theme={theme}>
         <Box >
+             <Box sx={{
+                position: 'fixed',
+                top: 20,
+                right: 20,
+                display: 'flex',
+                gap: 2,
+                zIndex: 1000
+            }}>
+                <Button
+                    component={Link}
+                    to="/login"
+                    variant="outlined"
+                    sx={{
+                        color: 'background.secondary',
+                        borderColor: 'background.secondary',
+                        fontFamily: 'Poppins',
+                        '&:hover': {
+                            backgroundColor: 'background.secondary',
+                            color: 'background.primary',
+                            borderColor: 'background.secondary'
+                        }
+                    }}
+                >
+                    Login
+                </Button>
+                <Button
+                    component={Link}
+                    to="/signup"
+                    variant="contained"
+                    sx={{
+                        backgroundColor: 'background.tertiary',
+                        color: 'background.secondary',
+                        fontFamily: 'Poppins',
+                        '&:hover': {
+                            backgroundColor: 'background.secondary',
+                            color: 'background.primary'
+                        }
+                    }}
+                >
+                    Sign Up
+                </Button>
+            </Box>
             <Box sx={{
                 height: '100vh', 
                 display: 'flex', 
@@ -131,7 +173,7 @@ function Home() {
                     },
                     {
                         text: 'Accounts',
-                        link: '/resources'
+                        link: '/typesofaccounts'
                     },
                     {
                         text: 'Taxes',

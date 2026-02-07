@@ -1,6 +1,6 @@
 import SignUpBox from "../Components/LoginSignUp/SignUpBox";
 
-function Login() {
+function SignUp() {
     
     return (
         <div>
@@ -10,4 +10,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default SignUp;
