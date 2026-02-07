@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 function Dashboard() {
     const [isEditing, setIsEditing] = useState(false);
+    const [errors, setErrors] = useState({});
 
     // fetch from backend
     const [profileData, setProfileData] = useState({
@@ -23,6 +24,9 @@ function Dashboard() {
         console.log('New image:', file);
     };
 
+    const validateEmail = (email) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
     const textFieldStyles = {
         '& .MuiInputBase-input': {
             color: 'background.secondary', 
@@ -132,7 +136,12 @@ function Dashboard() {
                             label="Email"
                             value={profileData.email}
                             disabled={!isEditing}
-                            onChange={(e) => setProfileData({...profileData, email: e.target.value})}
+                            onChange={(e) => {
+                            setProfileData({...profileData, email: e.target.value});
+                            setErrors({...errors, email: !validateEmail(e.target.value)});
+                            }}
+                            error={errors.email}
+                            helperText={errors.email ? 'Invalid email format' : ''}
                             fullWidth
                         />
                         <TextField
@@ -157,7 +166,7 @@ function Dashboard() {
 
                     {/* Account Actions */}
                     <Box>
-                        <Typography variant="h5" fontWeight="bold" mb={3}>
+                        <Typography sx={{color:'background.tertiary'}} variant="h5" fontWeight="bold" mb={3}>
                             Account Settings
                         </Typography>
                         <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
