@@ -6,36 +6,13 @@ import {
   Button,
   Typography,
   Grid,
-  createTheme,
-  ThemeProvider
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import HomePageCard from '../Components/HomePage/HomePageCard';
 import IntroductionToFeature from '../Components/IntroductionToFeature';
 import MoneyMentorIMG from "../Components/HomePage/MoneyMentor.png";
-const theme = createTheme({
-            typography: {
-                fontFamily: 'Poppins, Arial, sans-serif',
-    
-            },
-            palette: {
-                background: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                    tertiary:"#a6757a"
-    
-                },
-                foreground: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                },
-                text: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                }
-            },
-        });
+import theme from "../theme";
 
 function Home() {
     const cardSectionRef = useRef(null); 
@@ -58,7 +35,6 @@ function Home() {
         };
     }, []);
   return (
-    <ThemeProvider theme={theme}>
         <Box >
              <Box sx={{
                 position: 'fixed',
@@ -201,7 +177,7 @@ function Home() {
                     buttons={[
                     {
                         text: 'Dashboard',
-                        link: '/budgetplanner'
+                        link: '/dashboard'
                     },
                     {
                         text: 'Transaction',
@@ -214,7 +190,6 @@ function Home() {
                 ]} />
         </Box>
     </Box>
-    </ThemeProvider>
   );
 }
 

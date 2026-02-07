@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { TextField, Button, Box, Typography, ThemeProvider } from '@mui/material';
+import { TextField, Button, Box, Typography } from '@mui/material';
 
 function SignUpBox() {
     const [username, setUsername] = useState('');
