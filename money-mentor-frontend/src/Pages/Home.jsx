@@ -180,7 +180,7 @@ function Home() {
                     buttons={[
                     {
                         text: 'Dashboard',
-                        link: '/budgetplanner'
+                        link: '/dashboard'
                     },
                     {
                         text: 'Transaction',
