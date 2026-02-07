@@ -11,6 +11,29 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+
+  // Profile fields
+  name: {
+    type: String,
+    default: ""
+  },
+  email: {
+    type: String,
+    default: ""
+  },
+  phone: {
+    type: String,
+    default: ""
+  },
+  location: {
+    type: String,
+    default: ""
+  },
+  profilePicture: {
+    type: String,
+    default: ""
+  },
+
   createdAt: {
     type: Date,
     default: Date.now
