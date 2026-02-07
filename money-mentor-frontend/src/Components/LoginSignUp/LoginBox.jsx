@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function LoginBox() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -24,15 +24,11 @@ function LoginBox() {
         return;
       }
 
-      // Save token
       localStorage.setItem("token", data.token);
       localStorage.setItem("username", data.username);
 
       alert("Login successful!");
-
-      
-      navigate("/dashboard"); 
-
+      navigate("/dashboard");
     } catch (err) {
       console.error(err);
       alert("Server not reachable");
@@ -40,16 +36,20 @@ function LoginBox() {
   };
 
   return (
-    <Box sx={{
-      maxWidth: 500,
-      mx: "auto",
-      mt: 10,
-      p: 4,
-      boxShadow: 3,
-      borderRadius: 3,
-      backgroundColor: "white"
-    }}>
-      <Typography variant="h4" textAlign="center">Login</Typography>
+    <Box
+      sx={{
+        maxWidth: 500,
+        mx: "auto",
+        mt: 10,
+        p: 4,
+        boxShadow: 3,
+        borderRadius: 3,
+        backgroundColor: "white",
+      }}
+    >
+      <Typography variant="h4" textAlign="center">
+        Login
+      </Typography>
 
       <form onSubmit={handleSubmit}>
         <TextField

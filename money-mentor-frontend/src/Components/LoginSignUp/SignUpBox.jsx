@@ -6,7 +6,7 @@ function SignUpBox() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPass, setConfPass] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -29,9 +29,7 @@ function SignUpBox() {
       setUsername("");
       setPassword("");
       setConfPass("");
-
       navigate("/login");
-
     } catch (err) {
       console.error(err);
       alert("Server not reachable");
