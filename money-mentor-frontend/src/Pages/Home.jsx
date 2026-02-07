@@ -6,15 +6,13 @@ import {
   Button,
   Typography,
   Grid,
-  createTheme,
-  ThemeProvider
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import HomePageCard from '../Components/HomePage/HomePageCard';
 import IntroductionToFeature from '../Components/IntroductionToFeature';
 import MoneyMentorIMG from "../Components/HomePage/MoneyMentor.png";
-import {theme} from "../App";
+import theme from "../theme";
 
 function Home() {
     const cardSectionRef = useRef(null); 
@@ -37,7 +35,6 @@ function Home() {
         };
     }, []);
   return (
-    <ThemeProvider theme={theme}>
         <Box >
              <Box sx={{
                 position: 'fixed',
@@ -193,7 +190,6 @@ function Home() {
                 ]} />
         </Box>
     </Box>
-    </ThemeProvider>
   );
 }
 

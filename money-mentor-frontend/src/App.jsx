@@ -10,43 +10,10 @@ import SeperateLoanPage from './Components/LoanPage/SeperateLoanPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
 import BudgetPlanner from './Pages/BudgetPlanner';
-import { Box, createTheme, ThemeProvider } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
 import EligibilityLoan from './Pages/Eligibilty_Loan';
 import Dashboard from './Pages/Dashboard';
-
-export const theme = createTheme({
-    typography: {
-            fontFamily: 'Poppins, Arial, sans-serif',
-
-        },
-    palette: {
-                background: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                    tertiary:"#a6757a"
-    
-                },
-                foreground: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                },
-                text: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                }
-            },  
-        components: {
-            MuiOutlinedInput: {
-                styleOverrides: {
-                    root: {
-                        '&:hover .MuiOutlinedInput-notchedOutline': {
-                            borderColor: "#5B122D",
-                        } 
-                    }
-            }
-        }
-    }
-});
+import theme from "./theme.js";
 
 function App() {
     return (

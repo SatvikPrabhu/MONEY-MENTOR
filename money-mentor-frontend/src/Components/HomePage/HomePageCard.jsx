@@ -6,13 +6,11 @@ import {
   Button,
   Typography,
   Grid,
-  ThemeProvider
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 function HomePageCard(props){
     return (
-        <ThemeProvider theme="theme">
         <Box sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -88,7 +86,6 @@ function HomePageCard(props){
                     </Box>
             </Box>
         </Box>
-        </ThemeProvider>
     )
 }
 

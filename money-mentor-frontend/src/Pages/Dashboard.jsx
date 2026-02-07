@@ -1,4 +1,4 @@
-import { TextField, Button, Box, Typography, ThemeProvider } from '@mui/material';
+import { TextField, Button, Box, Typography } from '@mui/material';
 import ProfilePicture from '../Components/Profile/ProfilePicture';
 
 function Dashboard() {

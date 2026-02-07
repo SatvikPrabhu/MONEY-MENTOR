@@ -1,9 +1,7 @@
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import {useState} from 'react';
 import SliderWithHeading from '../Components/LoanPage/SliderWithHeading';
-import {theme} from "../App.jsx"
 
 function LoanPage() {
     
@@ -54,7 +52,6 @@ function EMI(values) {
 }
     return (
         <div> 
-            <ThemeProvider theme={theme}>
                 <Typography variant="h3" sx={{ fontSize: '1.rem', textAlign:'center', mt: 8}}>
                     Loan Calculator
                 </Typography>
@@ -124,7 +121,6 @@ function EMI(values) {
                         </Box>
                     </Box>
                 </Box>
-            </ThemeProvider>
         </div>
     );
 }

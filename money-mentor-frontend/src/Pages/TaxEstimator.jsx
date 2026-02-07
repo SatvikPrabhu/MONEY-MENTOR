@@ -1,5 +1,4 @@
 import {Button, Box, Typography} from "@mui/material";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useRef, useState } from "react";
 import IntroductionToFeature from "../Components/IntroductionToFeature";
 import AgeSlider from "../Components/TaxEstimator/AgeSlider";
@@ -7,7 +6,6 @@ import ResidentialSwitch from "../Components/TaxEstimator/ResidentialSwitch";
 import FinancialYearDropdown from "../Components/TaxEstimator/FYDropdown";
 import SalarySlider from "../Components/TaxEstimator/SalarySlider";
 import CustomTable from "../Components/CustomTable";
-import {theme} from "../App.jsx";
 
 function TaxEstimator() {
     const formSectionRef = useRef(null); 
@@ -24,7 +22,7 @@ function TaxEstimator() {
     };      
 
     return <div> 
-        <ThemeProvider theme={theme}>
+        
     <IntroductionToFeature 
         title="Tax Estimator"
         backgroundboxsx={{
@@ -190,7 +188,6 @@ function TaxEstimator() {
             
         </Box>
     </Box>
-</ThemeProvider>
     </div>;
 }
 
