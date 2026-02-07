@@ -164,9 +164,6 @@ function Dashboard() {
                             <Button variant="outlined">
                                 Change Password
                             </Button>
-                            <Button variant="outlined">
-                                Privacy Settings
-                            </Button>
                             <Button variant="outlined" color="error">
                                 Delete Account
                             </Button>
