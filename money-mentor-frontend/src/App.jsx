@@ -13,44 +13,8 @@ import TaxEstimator from './Pages/TaxEstimator';
 import BudgetPlanner from './Pages/BudgetPlanner';
 import EligibilityLoan from './Pages/Eligibilty_Loan';
 import Dashboard from './Pages/Dashboard';
-
-import Box from "@mui/material/Box";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-const theme = createTheme({
-    typography: {
-            fontFamily: 'Poppins, Arial, sans-serif',
-        },
-    palette: {
-                background: {
-                    default: "#F4E1C6",
-                    paper: "#F4E1C6",
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                    tertiary:"#a6757a"
-    
-                },
-                foreground: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                },
-                text: {
-                    primary: "#5B122D",
-                    secondary: "#F4E1C6",
-                }
-            },  
-        components: {
-            MuiOutlinedInput: {
-                styleOverrides: {
-                    root: {
-                        '&:hover .MuiOutlinedInput-notchedOutline': {
-                            borderColor: "#5B122D",
-                        } 
-                    }
-            }
-        }
-    }
-});
+import Quiz from './Pages/Quiz';
+import theme from "./theme.js";
 
 function App() {
     return (
@@ -73,6 +37,7 @@ function App() {
             <Route path="/taxestimator" element = {<TaxEstimator/>} />
             <Route path="/budgetplanner" element = {<BudgetPlanner/>} />
             <Route path="/dashboard" element = {<Dashboard/>} />
+            <Route path="/quiz" element = {<Quiz/>} />
           </Routes>
         
         </Box>
