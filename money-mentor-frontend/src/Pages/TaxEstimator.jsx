@@ -1,5 +1,5 @@
 import {Button, Box, Typography} from "@mui/material";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import IntroductionToFeature from "../Components/IntroductionToFeature";
 import AgeSlider from "../Components/TaxEstimator/AgeSlider";
 import ResidentialSwitch from "../Components/TaxEstimator/ResidentialSwitch";
@@ -9,6 +9,9 @@ import CustomTable from "../Components/CustomTable";
 
 function TaxEstimator() {
     const formSectionRef = useRef(null); 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const [ageGroup, setAgeGroup] = useState(1);
     const [isNRI, setIsNRI] = useState(false);
     const [financialYear, setFinancialYear] = useState('2024-2025');
