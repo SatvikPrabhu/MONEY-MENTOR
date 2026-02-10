@@ -51,14 +51,12 @@ function EMI(values) {
     return Math.round(emi);
 }
     return (
-        <div> 
-                <Typography variant="h3" sx={{ fontSize: '1.rem', textAlign:'center', mt: 8}}>
+        <Box sx={{minHeight: "100vh", backgroundColor: "#F4E1C6 !important", pt: 6}}> 
+                <Typography variant="h3" sx={{ fontSize: '1.rem', textAlign:'center', mt: 8, pb: 10}}>
                     Loan Calculator
                 </Typography>
                 <Box sx={{display:'flex', justifyContent:'center', gap:30}}>
                     <Box sx={{
-                        position: 'relative',
-                        top: 80,
                         width: 500,
                         borderRadius: 2,
                         display: 'flex',
@@ -92,8 +90,6 @@ function EMI(values) {
                     </Box>
 
                     <Box sx={{
-                        position: 'relative',
-                        top: 80,
                         width: 500,
                         borderRadius: 2,
                         display: 'flex',
@@ -121,7 +117,7 @@ function EMI(values) {
                         </Box>
                     </Box>
                 </Box>
-        </div>
+        </Box>
     );
 }
 
