@@ -7,6 +7,7 @@ import TypesofLoans from "./Pages/TypesofLoans";
 import TypesofAccounts from "./Pages/TypesofAccounts";
 import LoanPage from './Pages/LoanPage';
 import SeperateLoanPage from './Components/LoanPage/SeperateLoanPage';
+import SeperateAccountPage from './Components/AccountsPage /SeperateAccountPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
 import BudgetPlanner from './Pages/BudgetPlanner';
@@ -66,6 +67,7 @@ function App() {
             <Route path="/loan/eligibility" element={<EligibilityLoan/>}/>
             <Route path="/loan/:loanType" element={<SeperateLoanPage/>}/>       
             <Route path="/typesofloan" element = {<TypesofLoans/>} />
+            <Route path="/account/:accountType" element={<SeperateAccountPage/>}/>
             <Route path="/typesofaccounts" element = {<TypesofAccounts/>} />
             <Route path="/creditscore" element = {<CreditScore/>} />
             <Route path="/taxestimator" element = {<TaxEstimator/>} />

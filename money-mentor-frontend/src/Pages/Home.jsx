@@ -145,7 +145,7 @@ function Home() {
                     buttons={[
                     {
                         text: 'Loans',
-                        link: '/loanpage'
+                        link: '/typesofloan'
                     },
                     {
                         text: 'Accounts',
@@ -165,7 +165,7 @@ function Home() {
                     },
                     {
                         text: 'Loan Calculator',
-                        link: '/resources'
+                        link: '/loanpage'
                     },
                     {
                         text: 'Tax Estimator',
