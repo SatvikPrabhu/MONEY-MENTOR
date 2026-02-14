@@ -11,4 +11,4 @@ function DocumentsLoan() {
      );
 }
 
-export default DocumentLoan;
+export default DocumentsLoan;
