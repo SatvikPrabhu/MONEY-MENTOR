@@ -7,13 +7,14 @@ import Home from "./Pages/Home";
 import TypesofLoans from "./Pages/TypesofLoans";
 import TypesofAccounts from "./Pages/TypesofAccounts";
 import LoanPage from './Pages/LoanPage';
-import SeparateLoanPage from './Components/LoanPage/SeparateLoanPage';
+import SeperateLoanPage from './Components/LoanPage/SeperateLoanPage.jsx';
 import SeparateAccountPage from './Components/AccountsPage/SeparateAccountPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
 import BudgetPlanner from './Pages/BudgetPlanner';
 import EligibilityLoan from './Pages/Eligibilty_Loan';
 import DocumentsLoan from './Pages/Documents_Loan';
+import DocumentsAccount from './Pages/Documents_Account.jsx';
 import Dashboard from './Pages/Dashboard';
 import Quiz from './Pages/Quiz';
 import theme from "./theme.js";
@@ -35,6 +36,7 @@ function App() {
             <Route path="/loan/documents" element={<DocumentsLoan/>}/>
             <Route path="/loan/:loanType" element={<SeparateLoanPage/>}/>       
             <Route path="/typesofloan" element = {<TypesofLoans/>} />
+            <Route path="/account/documents" element={<DocumentsAccount/>}/>
             <Route path="/account/:accountType" element={<SeparateAccountPage/>}/>
             <Route path="/typesofaccounts" element = {<TypesofAccounts/>} />
             <Route path="/creditscore" element = {<CreditScore/>} />

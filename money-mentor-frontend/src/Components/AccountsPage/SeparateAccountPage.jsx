@@ -282,6 +282,8 @@ function SeparateAccountPage() {
             Eligibility
           </Button>
           <Button
+          component={Link}
+            to="/account/documents"
             variant="contained"
             sx={{
               backgroundColor: "#5B122D",
