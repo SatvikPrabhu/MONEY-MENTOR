@@ -3,7 +3,7 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import PersonIcon from '@mui/icons-material/Person';
 import TimeToLeaveIcon from '@mui/icons-material/TimeToLeave';
 import EngineeringIcon from '@mui/icons-material/Engineering';
-import AccountPageCard from "../Components/AccountsPage /AccountPageCard";
+import AccountPageCard from "../Components/AccountsPage/AccountPageCard";
 
 function TypesofAccounts()
 {
