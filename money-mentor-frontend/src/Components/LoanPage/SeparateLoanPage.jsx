@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import { useParams } from "react-router-dom";
 import LoanSteps from "./LoanSteps";
 
-function SeperateLoanPage() {
+function SeparateLoanPage() {
   const { loanType } = useParams();
 
   const loanInfo = {
@@ -331,4 +331,4 @@ function SeperateLoanPage() {
   );
 }
 
-export default SeperateLoanPage;
+export default SeparateLoanPage;
