@@ -37,14 +37,7 @@ function SignUpBox() {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-      }}
-    >
+    <Box sx={{ width: '100%'}}>
       <Box
         sx={{
           maxWidth: 500,
@@ -61,7 +54,6 @@ function SignUpBox() {
             color: "#F4E1C6", // Pale wheat text
             mb: 3,
             fontWeight: 600,
-            fontFamily: 'serif',
           }}
         >
           Sign Up
