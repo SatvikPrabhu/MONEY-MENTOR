@@ -7,7 +7,7 @@ import TypesofLoans from "./Pages/TypesofLoans";
 import TypesofAccounts from "./Pages/TypesofAccounts";
 import LoanPage from './Pages/LoanPage';
 import SeperateLoanPage from './Components/LoanPage/SeperateLoanPage';
-import SeperateAccountPage from './Components/AccountsPage /SeperateAccountPage';
+import SeperateAccountPage from './Components/AccountsPage/SeperateAccountPage';
 import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
 import BudgetPlanner from './Pages/BudgetPlanner';
