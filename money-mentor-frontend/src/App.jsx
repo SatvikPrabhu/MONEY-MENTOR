@@ -13,6 +13,7 @@ import CreditScore from './Pages/CreditScore';
 import TaxEstimator from './Pages/TaxEstimator';
 import BudgetPlanner from './Pages/BudgetPlanner';
 import EligibilityLoan from './Pages/Eligibilty_Loan';
+import DocumentsLoan from './Pages/Documents_Loan';
 import Dashboard from './Pages/Dashboard';
 import Quiz from './Pages/Quiz';
 import theme from "./theme.js";
@@ -31,7 +32,8 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/loanpage" element = {<LoanPage/>} />
             <Route path="/loan/eligibility" element={<EligibilityLoan/>}/>
-            <Route path="/loan/:loanType" element={<SeparateLoanPage/>}/>       
+            <Route path="/loan/documents" element={<DocumentsLoan/>}/>
+            <Route path="/loan/:loanType" element={<SeperateLoanPage/>}/>       
             <Route path="/typesofloan" element = {<TypesofLoans/>} />
             <Route path="/account/:accountType" element={<SeparateAccountPage/>}/>
             <Route path="/typesofaccounts" element = {<TypesofAccounts/>} />

@@ -254,7 +254,7 @@ function SeperateLoanPage() {
         <Box sx={{ display: "flex", flexDirection: "row", gap: 6 }}>
           <Button
             component={Link}
-            to="/EligibilityLoan"
+            to="/loan/eligibility"
             variant="contained"
             sx={{
               backgroundColor: "#5B122D",
@@ -271,6 +271,8 @@ function SeperateLoanPage() {
             Eligibility
           </Button>
           <Button
+          component={Link}
+            to="/loan/documents"
             variant="contained"
             sx={{
               backgroundColor: "#5B122D",
