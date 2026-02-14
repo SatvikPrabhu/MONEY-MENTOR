@@ -33,7 +33,7 @@ function App() {
             <Route path="/loanpage" element = {<LoanPage/>} />
             <Route path="/loan/eligibility" element={<EligibilityLoan/>}/>
             <Route path="/loan/documents" element={<DocumentsLoan/>}/>
-            <Route path="/loan/:loanType" element={<SeperateLoanPage/>}/>       
+            <Route path="/loan/:loanType" element={<SeparateLoanPage/>}/>       
             <Route path="/typesofloan" element = {<TypesofLoans/>} />
             <Route path="/account/:accountType" element={<SeparateAccountPage/>}/>
             <Route path="/typesofaccounts" element = {<TypesofAccounts/>} />
