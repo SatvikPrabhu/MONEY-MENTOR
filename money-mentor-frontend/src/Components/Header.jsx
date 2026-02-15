@@ -1,67 +1,93 @@
 import React from "react";
-import { AppBar, Toolbar, Box, Button} from '@mui/material';
-import { Link } from 'react-router-dom';
+import { AppBar, Toolbar, Box, Button } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
+import HomeLogo from "./HomePage/HomeLogo";
 
 function Header() {
-    return (
-        <header >  
-            <Toolbar>
-                <Link to="/home">
-                <Box
-                component="img"
-                src="/Logo-removebg-preview.png"
-                alt="Company Logo"
-                sx={{ height: 150, mr: 2, margin:0}}
-                />
-                </Link>
-            <Box sx={{ display: 'flex', gap: 3 }} >
-                <Button 
-                    variant="contained" 
-                    sx={{ 
-                        backgroundColor: '#F4E1C6', 
-                        color: "#5B122D",
-                        '&:hover': {
-                            backgroundColor: '#FFF3E7' 
-                        }
-                    }}
-                    component={Link} 
-                    to="/loanpage">
-                    Calculator
-                </Button>
-            </Box>
-            <Box sx={{ flexGrow: 1 }} />
+    const navigate = useNavigate();
+    const token = localStorage.getItem('token');
 
-            <Box sx={{ display: 'flex', gap: 3 }} >
-                <Button 
-                    variant="contained" 
-                    sx={{ 
-                        backgroundColor: '#F4E1C6', 
-                        color: "#5B122D",
-                        '&:hover': {
-                            backgroundColor: '#FFF3E7' 
-                        }
-                    }}
-                    component={Link} 
-                    to="/login">
-                    LOG-IN
-                </Button>
-                            <Button 
-                    variant="contained" 
-                    sx={{ 
-                        backgroundColor: '#F4E1C6', 
-                        color: "#5B122D",
-                        '&:hover': {
-                            backgroundColor: '#FFF3E7' 
-                        }
-                    }}
-                    component={Link} 
-                    to="/signup">
-                    SIGN-UP
-                </Button>
-            </Box>
-            {/* Remaining header content */}
-        </Toolbar>
-        </header>);
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        navigate('/login');
+    };
+
+    return (
+       <AppBar position="fixed" 
+        sx={{ 
+            backgroundColor: 'background.primary', 
+            boxShadow: 'none', 
+            height: 100,
+            borderBottom: '2px solid #350b1a'
+             }}>
+        <Toolbar 
+            sx={{ 
+                justifyContent: 'space-between', 
+                alignItems: 'center', 
+                height: '100%' 
+                }}>
+                <HomeLogo/>
+                <Box sx={{ display: 'flex', gap: 2 }}>
+                    {token ? (
+                        <Button
+                            onClick={handleLogout}
+                            variant="outlined"
+                            sx={{
+                                backgroundColor: 'background.primary',
+                                color: 'background.secondary',
+                                borderColor: 'background.secondary',
+                                fontFamily: 'Poppins',
+                                '&:hover': {
+                                    backgroundColor: 'background.secondary',
+                                    color: 'background.primary',
+                                    borderColor: 'background.secondary'
+                                }
+                            }}
+                        >
+                            Logout
+                        </Button>
+                    ) : (
+                        <>
+                            <Button
+                                component={Link}
+                                to="/login"
+                                variant="outlined"
+                                sx={{
+                                    backgroundColor: 'background.primary',
+                                    color: 'background.secondary',
+                                    borderColor: 'background.secondary',
+                                    fontFamily: 'Poppins',
+                                    '&:hover': {
+                                        backgroundColor: 'background.secondary',
+                                        color: 'background.primary',
+                                        borderColor: 'background.secondary'
+                                    }
+                                }}
+                            >
+                                Login
+                            </Button>
+                            <Button
+                                component={Link}
+                                to="/signup"
+                                variant="contained"
+                                sx={{
+                                    backgroundColor: 'background.tertiary',
+                                    color: 'background.secondary',
+                                    fontFamily: 'Poppins',
+                                    '&:hover': {
+                                        backgroundColor: 'background.secondary',
+                                        color: 'background.primary'
+                                    }
+                                }}
+                            >
+                                Sign Up
+                            </Button>
+                        </>
+                    )}
+                </Box>
+            </Toolbar>
+        </AppBar>
+    );
 }
 
 export default Header;

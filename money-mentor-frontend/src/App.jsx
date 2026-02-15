@@ -3,6 +3,7 @@ import { ThemeProvider, Box } from '@mui/material';
 import Login from './Pages/Login';
 import SignUp from "./Pages/SignUp";
 import Header from "./Components/Header";
+import ProtectedRoute from './Components/ProtectedRoute';
 import Home from "./Pages/Home";
 import TypesofLoans from "./Pages/TypesofLoans";
 import TypesofAccounts from "./Pages/TypesofAccounts";
@@ -23,8 +24,8 @@ function App() {
     return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-      <Box id="app-container" sx={{minHeight: "100vh", backgroundColor: 'background.paper'}}>
-        
+      <Box id="app-container" sx={{minHeight: "100vh", backgroundColor: 'background.secondary'}}>
+      <Header> </Header>
 
           <Routes>
             <Route path="/" element={<Home/>} />
@@ -42,7 +43,7 @@ function App() {
             <Route path="/creditscore" element = {<CreditScore/>} />
             <Route path="/taxestimator" element = {<TaxEstimator/>} />
             <Route path="/budgetplanner" element = {<BudgetPlanner/>} />
-            <Route path="/dashboard" element = {<Dashboard/>} />
+            <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>} />
             <Route path="/quiz" element = {<Quiz/>} />
           </Routes>
         

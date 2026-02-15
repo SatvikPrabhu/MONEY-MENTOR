@@ -36,31 +36,23 @@ function LoginBox() {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-      }}
-    >
+    <Box sx={{ width: '100%', p: 3 }}>
       <Box
         sx={{
           maxWidth: 500,
           width: '100%',
           p: 4,
           borderRadius: 3,
-          backgroundColor: "#5B122D", // Deep pink background
+          backgroundColor: 'background.primary', // Deep pink background
         }}
       >
         <Typography 
-          variant="h4" 
+          variant="h3" 
           textAlign="center"
           sx={{ 
             color: "#F4E1C6", // Pale wheat text
             mb: 3,
             fontWeight: 600,
-            fontFamily: 'serif',
           }}
         >
           Login
